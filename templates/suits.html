@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Iron Man Suit Database — Complete gallery of all Iron Man armors from Mark I to Mark LXXXV, including the Iron Legion and special purpose suits.">
+  <title>Suits — Tony Stark | The Iron Legacy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/suits.css">
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='none' stroke='%23e62429' stroke-width='6'/><circle cx='50' cy='50' r='20' fill='none' stroke='%23e62429' stroke-width='4'/><circle cx='50' cy='50' r='8' fill='%23e62429'/></svg>">
+</head>
+<body>
+
+  <div class="page-loader"><div class="loader-reactor">
+    <div class="loader-ring loader-ring-1"></div>
+    <div class="loader-ring loader-ring-2"></div>
+    <div class="loader-ring loader-ring-3"></div>
+    <div class="loader-core"></div>
+  </div></div>
+  <div class="scanline-overlay"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="../source/iron_logo_transparent.png" alt="Iron Man Logo">
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="appearances.html">Appearances</a>
+        <a href="works.html">Works</a>
+        <a href="suits.html" class="active">Suits</a>
+        <a href="timeline.html">Timeline</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="appearances.html">Appearances</a>
+      <a href="works.html">Works</a>
+      <a href="suits.html" class="active">Suits</a>
+      <a href="timeline.html">Timeline</a>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <header class="works-page-header">
+    <div class="container">
+      <div class="header-hud-line"></div>
+      <span class="section-subtitle" style="display:block; margin-bottom: var(--space-md); font-family: var(--font-mono); color: var(--arc-blue); letter-spacing: 0.25em; text-transform: uppercase;">// Armor Database</span>
+      <h1 class="header-title">
+        <span class="wht-text" data-text="IRON MAN">IRON MAN</span>
+        <span class="wht-text wht-accent" data-text="SUITS">SUITS</span>
+      </h1>
+      <p class="page-subtitle" style="font-size: var(--fs-sm); color: var(--text-secondary); margin-top: var(--space-sm);">The Complete Armor Collection — Mark I through Mark LXXXV</p>
+    </div>
+  </header>
+
+  <!-- Suits Content -->
+  <section class="section">
+    <div class="container">
+
+      <!-- ============ ERA 1: EARLY SUITS (Mark I - VII) ============ -->
+      <div class="suits-era" id="earlySuits">
+        <div class="era-header">
+          <h3>Early Suits</h3>
+          <div class="era-line"></div>
+          <span class="era-count">Mark I — VII · 7 Suits</span>
+        </div>
+
+        <div class="suits-grid">
+          <!-- Mark I -->
+          <div class="suit-card" data-name="Mark I" data-mark="MARK I" data-desc="The first Iron Man armor was built inside a cave in Afghanistan using limited supplies. Tony Stark and Ho Yinsen designed it as a means of escape from the Ten Rings terrorist organization. Powered by the first miniaturized Arc Reactor embedded in Tony's chest, the Mark I featured crude flamethrowers, a basic jet propulsion system for limited flight, and heavy armor plating made from missile parts and scrap metal." data-movie="Iron Man (2008)" data-specs='{"Power Source":"Miniaturized Arc Reactor (Palladium)","Weapons":"Flamethrowers, Missile Launcher","Armor Material":"Scrap Iron & Missile Parts","Special Feature":"First Iron Man Suit Ever Built","User":"Tony Stark","Status":"Destroyed during escape","Designer":"Tony Stark & Ho Yinsen"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/mark1.jpg" alt="Iron Man Mark I" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK I</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark I</h4>
+              <span class="suit-alias">"The Origin"</span>
+              <p>Built in a cave with a box of scraps. Crude armor with flamethrowers and basic jet system. Designed by Tony Stark & Ho Yinsen to escape the Ten Rings.</p>
+              <span class="suit-movie">Iron Man (2008)</span>
+            </div>
+          </div>
+
+          <!-- Mark II -->
+          <div class="suit-card" data-name="Mark II" data-mark="MARK II" data-desc="The Mark II was the first suit built with proper resources in Tony's Malibu workshop. Left unpainted in silver, it served as the primary test platform for flight systems, repulsor technology, and stabilization flaps. It confirmed Tony could achieve sustained flight and was later confiscated by James Rhodes and modified by Justin Hammer to become the War Machine armor." data-movie="Iron Man (2008)" data-specs='{"Power Source":"Arc Reactor (Palladium)","Armor Material":"Silver Titanium Alloy","Special Feature":"First Full Sustained Flight","Weapons":"Repulsors (prototype)","Top Speed":"Mach 2 (test flight)","Weakness":"High-altitude icing","User":"Tony Stark → James Rhodes","Status":"Modified into War Machine"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Man Armor Mark II.webp" alt="Iron Man Mark II" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK II</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark II</h4>
+              <span class="suit-alias">"The Prototype"</span>
+              <p>First lab-built suit. Silver titanium alloy. Achieved first sustained flight. Later confiscated by Rhodes and became War Machine.</p>
+              <span class="suit-movie">Iron Man (2008)</span>
+            </div>
+          </div>
+
+          <!-- Mark III -->
+          <div class="suit-card" data-name="Mark III" data-mark="MARK III" data-desc="The iconic red and gold armor. The Mark III was the first combat-ready Iron Man suit, built with a gold-titanium alloy to resolve the high-altitude icing problem discovered during the Mark II test flight. It featured repulsor beams, a Unibeam chest projector, shoulder-mounted anti-personnel guns, forearm-mounted missiles, flares, and a sophisticated HUD system connected to J.A.R.V.I.S." data-movie="Iron Man (2008)" data-specs='{"Power Source":"Arc Reactor (Palladium)","Armor Material":"Gold-Titanium Alloy","Weapons":"Repulsors, Unibeam, Missiles, Anti-Tank Missile","Special Feature":"Anti-Icing Gold-Titanium Plating","Top Speed":"Mach 3+","AI Assistant":"J.A.R.V.I.S.","Status":"Heavily damaged vs. Iron Monger"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Man Armor Mark III.webp" alt="Iron Man Mark III" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK III</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark III</h4>
+              <span class="suit-alias">"The Classic Red & Gold"</span>
+              <p>First combat-ready armor. Gold-titanium alloy solved icing. Features repulsors, Unibeam, missiles, and J.A.R.V.I.S. integration.</p>
+              <span class="suit-movie">Iron Man (2008)</span>
+            </div>
+          </div>
+
+          <!-- Mark IV -->
+          <div class="suit-card" data-name="Mark IV" data-mark="MARK IV" data-desc="A refined and improved version of the Mark III, the Mark IV featured enhanced durability, improved flight systems, and more streamlined aesthetics. It was Tony's primary suit during the early events of Iron Man 2, used when he appeared at the Stark Expo and during initial confrontations with Whiplash." data-movie="Iron Man 2 (2010)" data-specs='{"Power Source":"Arc Reactor (Palladium)","Armor Material":"Enhanced Gold-Titanium","Weapons":"Repulsors, Unibeam, Missiles","Special Feature":"Streamlined Design","AI Assistant":"J.A.R.V.I.S.","Status":"Retired"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Man Armor Mark IV.webp" alt="Iron Man Mark IV" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK IV</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark IV</h4>
+              <span class="suit-alias">"The Upgrade"</span>
+              <p>Refined Mark III design with improved durability and flight systems. Primary suit at the Stark Expo. Enhanced aesthetics.</p>
+              <span class="suit-movie">Iron Man 2 (2010)</span>
+            </div>
+          </div>
+
+          <!-- Mark V -->
+          <div class="suit-card" data-name="Mark V" data-mark="MARK V" data-desc="The Suitcase Suit — a revolutionary portable armor stored in a briefcase. The Mark V could be deployed rapidly in emergency situations, with interlocking plates folding out to encase Tony's body in seconds. While lighter and less durable than standard armors, its portability was unmatched. Tony used it during the Monaco Grand Prix attack by Ivan Vanko (Whiplash)." data-movie="Iron Man 2 (2010)" data-specs='{"Power Source":"Arc Reactor (Palladium)","Armor Material":"Lightweight Composite","Weapons":"Repulsors Only","Special Feature":"Briefcase Transformation","Deploy Time":"~10 seconds","Weakness":"Reduced Armor & Weapons","Status":"Retired"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Man Armor Mark V.webp" alt="Iron Man Mark V" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK V</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark V</h4>
+              <span class="suit-alias">"The Suitcase Suit"</span>
+              <p>Portable armor stored in a briefcase. Deploys in seconds. Used against Whiplash at Monaco Grand Prix. Lighter but highly convenient.</p>
+              <span class="suit-movie">Iron Man 2 (2010)</span>
+            </div>
+          </div>
+
+          <!-- Mark VI -->
+          <div class="suit-card" data-name="Mark VI" data-mark="MARK VI" data-desc="The first suit powered by the new element Tony synthesized based on his father Howard Stark's research. Featuring a distinctive triangular Arc Reactor chest piece, the Mark VI solved the palladium poisoning issue and introduced a powerful one-time-use chest laser. Used during the Battle of New York against the Chitauri invasion alongside the Avengers." data-movie="Iron Man 2 (2010) / The Avengers (2012)" data-specs='{"Power Source":"New Element Arc Reactor","Armor Material":"Vibranium-Enhanced Alloy","Weapons":"Repulsors, Unibeam, One-Shot Laser","Special Feature":"Triangular Arc Reactor","AI Assistant":"J.A.R.V.I.S.","Status":"Retired after Avengers"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Man Armor Mark VI.webp" alt="Iron Man Mark VI" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK VI</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark VI</h4>
+              <span class="suit-alias">"New Element"</span>
+              <p>First suit with new element core. Triangular Arc Reactor. Features one-shot chest laser. Used in the Battle of New York.</p>
+              <span class="suit-movie">Iron Man 2 / The Avengers</span>
+            </div>
+          </div>
+
+          <!-- Mark VII -->
+          <div class="suit-card" data-name="Mark VII" data-mark="MARK VII" data-desc="The Mark VII was deployed mid-air during the Battle of New York via a homing pod system activated by specialized bracelets. The most combat-heavy early armor, it featured extensive weaponry including thigh-mounted missile pods, shoulder micro-missiles, repulsors, and enhanced flight thrusters. This is the suit Tony used to carry the nuclear missile through the portal and into space." data-movie="The Avengers (2012)" data-specs='{"Power Source":"New Element Arc Reactor","Armor Material":"Heavy Combat Alloy","Weapons":"Repulsors, Unibeam, Micro-Missiles, Laser","Special Feature":"Mid-Air Rapid Deployment via Pods","Deploy Method":"Homing Bracelet Signal","AI Assistant":"J.A.R.V.I.S.","Status":"Retired / Stored in Hall of Armor"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Man Armor Mark VII.webp" alt="Iron Man Mark VII" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK VII</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark VII</h4>
+              <span class="suit-alias">"Battle of New York"</span>
+              <p>Mid-air rapid deployment via homing pods. Heavy combat loadout with micro-missiles. Carried the nuke through the portal.</p>
+              <span class="suit-movie">The Avengers (2012)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ ERA 2: IRON LEGION (Mark VIII - XLI) ============ -->
+      <div class="suits-era" id="ironLegion">
+        <div class="era-header">
+          <h3>Iron Legion</h3>
+          <div class="era-line"></div>
+          <span class="era-count">Mark VIII — XLI · Built during Tony's PTSD insomnia</span>
+        </div>
+
+        <div class="suits-grid">
+          <div class="suit-card" data-name="Mark VIII" data-mark="MARK VIII" data-desc="The first suit built after the Battle of New York. Features improved flight stabilizers, enhanced repulsors, and better energy management. Part of the Iron Legion built during Tony's period of anxiety and insomnia following the Chitauri invasion." data-movie="Iron Man 3 (2013)" data-specs='{"Power Source":"New Element Arc Reactor","Type":"General Purpose","Special Feature":"Enhanced Flight Stabilizers","Status":"Destroyed — Clean Slate Protocol"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Legions/Iron Man Armor Mark VIII.webp" alt="Mark VIII" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK VIII</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark VIII</h4>
+              <p>First post-New York suit. Enhanced flight stabilizers and improved energy management systems.</p>
+              <span class="suit-movie">Iron Man 3 (2013)</span>
+            </div>
+          </div>
+
+          <div class="suit-card" data-name="Mark IX" data-mark="MARK IX" data-desc="Featured improved repulsor output and a refined targeting system. Part of the rapid iteration Tony undertook while battling PTSD-driven insomnia after the Battle of New York." data-movie="Iron Man 3 (2013)" data-specs='{"Power Source":"New Element Arc Reactor","Type":"General Purpose","Special Feature":"Improved Targeting HUD","Status":"Destroyed — Clean Slate Protocol"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Legions/Iron Man Armor Mark IX.webp" alt="Mark IX" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK IX</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark IX</h4>
+              <p>Improved repulsor output, refined targeting HUD. Built during Tony's PTSD-driven engineering marathon.</p>
+              <span class="suit-movie">Iron Man 3 (2013)</span>
+            </div>
+          </div>
+
+          <div class="suit-card" data-name="Mark X" data-mark="MARK X" data-desc="Enhanced structural integrity with reinforced plating for increased durability in combat scenarios." data-movie="Iron Man 3 (2013)" data-specs='{"Type":"Heavy Duty","Special Feature":"Reinforced Structural Plating","Status":"Destroyed — Clean Slate Protocol"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Legions/Iron Man Armor Mark X.jpg" alt="Mark X" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK X</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark X</h4>
+              <p>Reinforced structural plating. Enhanced durability for heavy combat scenarios.</p>
+              <span class="suit-movie">Iron Man 3 (2013)</span>
+            </div>
+          </div>
+
+          <div class="suit-card" data-name="Mark XI" data-mark="MARK XI" data-desc="A stealth-enhanced variant designed for covert operations with reduced radar signature and quieter flight systems." data-movie="Iron Man 3 (2013)" data-specs='{"Type":"Stealth","Special Feature":"Reduced Radar Cross-Section","Status":"Destroyed — Clean Slate Protocol"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Legions/Iron Man Armor Mark XI.webp" alt="Mark XI" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK XI</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark XI</h4>
+              <p>Stealth-enhanced variant with reduced radar signature and quieter flight systems.</p>
+              <span class="suit-movie">Iron Man 3 (2013)</span>
+            </div>
+          </div>
+
+          <div class="suit-card" data-name="Mark XV — Sneaky" data-mark="MARK XV" data-desc="Codenamed 'Sneaky,' this stealth suit was designed for covert reconnaissance and infiltration missions. Features radar-absorbing coating, silent thrusters, and optical camouflage capability." data-movie="Iron Man 3 (2013)" data-specs='{"Codename":"Sneaky","Type":"Stealth / Infiltration","Special Feature":"Radar Evasion & Silent Thrusters","Status":"Destroyed — Clean Slate Protocol"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Legions/Iron Man Armor Mark XV.webp" alt="Mark XV - Sneaky" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK XV</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark XV</h4>
+              <span class="suit-alias">"Sneaky"</span>
+              <p>Covert stealth suit with radar-absorbing coating, silent thrusters, and optical camouflage capability.</p>
+              <span class="suit-movie">Iron Man 3 (2013)</span>
+            </div>
+          </div>
+
+          <div class="suit-card" data-name="Mark XVII — Heartbreaker" data-mark="MARK XVII" data-desc="Codenamed 'Heartbreaker,' this Artillery Level RT suit features an oversized chest Repulsor Transmitter for a dramatically enhanced Unibeam. Designed for long-range bombardment with an extra-powerful energy output." data-movie="Iron Man 3 (2013)" data-specs='{"Codename":"Heartbreaker","Type":"Artillery Level RT","Special Feature":"Oversized Unibeam Chest RT","Weapons":"Enhanced Repulsors, Super Unibeam","Status":"Destroyed — Clean Slate Protocol"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Legions/Iron Man Armor Mark XVII.webp" alt="Mark XVII - Heartbreaker" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK XVII</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark XVII</h4>
+              <span class="suit-alias">"Heartbreaker"</span>
+              <p>Artillery Level RT suit. Oversized chest Repulsor Transmitter for dramatically enhanced Unibeam attacks.</p>
+              <span class="suit-movie">Iron Man 3 (2013)</span>
+            </div>
+          </div>
+
+          <div class="suit-card" data-name="Mark XX — Python" data-mark="MARK XX" data-desc="Codenamed 'Python,' this Long-Range Suit was designed for extended flight missions. Features enhanced fuel efficiency, upgraded thruster systems, and aerodynamic design for sustained long-distance travel." data-movie="Iron Man 3 (2013)" data-specs='{"Codename":"Python","Type":"Long Range","Special Feature":"Extended Flight Endurance","Status":"Destroyed — Clean Slate Protocol"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Legions/Iron Man Armor Mark XX.webp" alt="Mark XX - Python" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK XX</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark XX</h4>
+              <span class="suit-alias">"Python"</span>
+              <p>Long-range suit for extended flight missions. Enhanced fuel efficiency and aerodynamic design.</p>
+              <span class="suit-movie">Iron Man 3 (2013)</span>
+            </div>
+          </div>
+
+          <div class="suit-card" data-name="Mark XXI — Midas" data-mark="MARK XXI" data-desc="Codenamed 'Midas,' this High-Altitude suit features full gold plating and was designed for extreme-altitude operations. Named after King Midas for its distinctive all-gold exterior." data-movie="Iron Man 3 (2013)" data-specs='{"Codename":"Midas","Type":"High Altitude","Special Feature":"Full Gold Plating, Pressurized Cabin","Altitude Rating":"Sub-Orbital","Status":"Destroyed — Clean Slate Protocol"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Legions/Iron Man Armor Mark XXI.webp" alt="Mark XXI - Midas" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK XXI</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark XXI</h4>
+              <span class="suit-alias">"Midas"</span>
+              <p>High-altitude suit with full gold plating. Designed for extreme-altitude and sub-orbital operations.</p>
+              <span class="suit-movie">Iron Man 3 (2013)</span>
+            </div>
+          </div>
+
+          <div class="suit-card" data-name="Mark XXV — Striker" data-mark="MARK XXV" data-desc="Codenamed 'Striker,' this Heavy Construction suit features enhanced pneumatic arms with jackhammer-like capability for heavy lifting and construction work. One of the few non-combat specialized suits in the Iron Legion." data-movie="Iron Man 3 (2013)" data-specs='{"Codename":"Striker","Type":"Heavy Construction","Special Feature":"Pneumatic Hammer Arms","Strength":"Enhanced Lifting","Status":"Destroyed — Clean Slate Protocol"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Legions/Iron Man Armor Mark XXV.webp" alt="Mark XXV - Striker" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK XXV</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark XXV</h4>
+              <span class="suit-alias">"Striker"</span>
+              <p>Heavy construction suit with pneumatic hammer arms. Enhanced lifting capability for structural work.</p>
+              <span class="suit-movie">Iron Man 3 (2013)</span>
+            </div>
+          </div>
+
+          <div class="suit-card" data-name="Mark XXX — Blue Steel" data-mark="MARK XXX" data-desc="Codenamed 'Blue Steel,' this Silver Centurion-style suit features a blue and silver color scheme with enhanced power output. It was one of the prototype Enhanced Energy suits in the Iron Legion." data-movie="Iron Man 3 (2013)" data-specs='{"Codename":"Blue Steel","Type":"Enhanced Energy","Special Feature":"Silver Centurion Color Scheme","Status":"Destroyed — Clean Slate Protocol"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Legions/Iron Man Armor Mark XXX.webp" alt="Mark XXX - Blue Steel" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK XXX</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark XXX</h4>
+              <span class="suit-alias">"Blue Steel"</span>
+              <p>Silver Centurion-style with blue and silver scheme. Enhanced energy output prototype.</p>
+              <span class="suit-movie">Iron Man 3 (2013)</span>
+            </div>
+          </div>
+
+          <div class="suit-card" data-name="Mark XXXIII — Silver Centurion" data-mark="MARK XXXIII" data-desc="Codenamed 'Silver Centurion,' this Enhanced Energy suit features a distinctive red and silver color scheme. It generates a powerful energy blade and energy shield. This was the suit that carried Tony during much of the Battle on the Norco oil rig against Aldrich Killian." data-movie="Iron Man 3 (2013)" data-specs='{"Codename":"Silver Centurion","Type":"Enhanced Energy","Special Feature":"Energy Blade & Shield","Weapons":"Energy Blade, Enhanced Repulsors","Status":"Destroyed — Clean Slate Protocol"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Legions/Iron Man Armor Mark XXXIII.webp" alt="Mark XXXIII - Silver Centurion" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK XXXIII</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark XXXIII</h4>
+              <span class="suit-alias">"Silver Centurion"</span>
+              <p>Enhanced energy suit with energy blade and shield systems. Key suit during the Norco oil rig battle vs. Killian.</p>
+              <span class="suit-movie">Iron Man 3 (2013)</span>
+            </div>
+          </div>
+
+          <div class="suit-card" data-name="Mark XXXVIII — Igor" data-mark="MARK XXXVIII" data-desc="Codenamed 'Igor,' this massive Heavy Lifting suit is essentially a prototype for the later Hulkbuster. Designed purely for structural support and heavy lifting rather than combat, Igor features massively reinforced limbs and a hunched posture optimized for load bearing." data-movie="Iron Man 3 (2013)" data-specs='{"Codename":"Igor","Type":"Heavy Lifting","Special Feature":"Structural Support Arms","Strength":"50+ Ton Lift Capacity","Combat":"Minimal — Utility Focused","Status":"Destroyed — Clean Slate Protocol"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Legions/Iron Man Armor Mark XXXVIII.webp" alt="Mark XXXVIII - Igor" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK XXXVIII</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark XXXVIII</h4>
+              <span class="suit-alias">"Igor"</span>
+              <p>Heavy lifting suit and Hulkbuster prototype. Massive reinforced limbs for structural support. 50+ ton capacity.</p>
+              <span class="suit-movie">Iron Man 3 (2013)</span>
+            </div>
+          </div>
+
+          <div class="suit-card" data-name="Mark XXXIX — Gemini" data-mark="MARK XXXIX" data-desc="Codenamed 'Gemini,' this Sub-Orbital suit was designed for space travel. Features pressurized systems, zero-gravity maneuvering thrusters, and enhanced life support for sub-orbital and low-orbit operations." data-movie="Iron Man 3 (2013)" data-specs='{"Codename":"Gemini (Starboost)","Type":"Sub-Orbital / Space","Special Feature":"Zero-Gravity Thrusters","Environment":"Vacuum-Capable","Life Support":"Extended Duration","Status":"Destroyed — Clean Slate Protocol"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Legions/Iron Man Armor Mark XXXIX.webp" alt="Mark XXXIX - Gemini" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK XXXIX</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark XXXIX</h4>
+              <span class="suit-alias">"Gemini / Starboost"</span>
+              <p>Sub-orbital space suit. Zero-gravity thrusters, pressurized cabin, and extended life support for space operations.</p>
+              <span class="suit-movie">Iron Man 3 (2013)</span>
+            </div>
+          </div>
+
+          <div class="suit-card" data-name="Mark XL — Shotgun" data-mark="MARK XL" data-desc="Codenamed 'Shotgun,' the fastest suit in the Iron Legion. A Hyper Velocity suit capable of reaching speeds up to Mach 5. The extreme speed comes at the cost of reduced armor protection and weaponry." data-movie="Iron Man 3 (2013)" data-specs='{"Codename":"Shotgun","Type":"Hyper Velocity","Special Feature":"Mach 5 Speed","Top Speed":"Mach 5","Weakness":"Reduced Armor for Speed","Status":"Destroyed — Clean Slate Protocol"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Legions/Iron Man Armor Mark XL.webp" alt="Mark XL - Shotgun" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK XL</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark XL</h4>
+              <span class="suit-alias">"Shotgun"</span>
+              <p>Hyper Velocity suit. Fastest in the Iron Legion at Mach 5. Sacrificed armor for extreme speed.</p>
+              <span class="suit-movie">Iron Man 3 (2013)</span>
+            </div>
+          </div>
+
+          <div class="suit-card" data-name="Mark XLI — Bones" data-mark="MARK XLI" data-desc="Codenamed 'Bones,' this skeleton-like suit features an exposed endoskeleton design that prioritizes speed and agility. With minimal armor plating, it was one of the lightest and most maneuverable suits in the Iron Legion. The open-frame design allowed for rapid movement but offered minimal protection." data-movie="Iron Man 3 (2013)" data-specs='{"Codename":"Bones","Type":"Skeleton / Speed","Special Feature":"Exposed Endoskeleton Frame","Weight":"Lightest in Legion","Agility":"Maximum","Weakness":"Minimal Armor Protection","Status":"Destroyed — Clean Slate Protocol"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Legions/Iron Man Armor Mark XLI.webp" alt="Mark XLI - Bones" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK XLI</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark XLI</h4>
+              <span class="suit-alias">"Bones"</span>
+              <p>Skeleton suit with exposed endoskeleton. Lightest and most agile in the Legion. Minimal armor, maximum speed.</p>
+              <span class="suit-movie">Iron Man 3 (2013)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ ERA 3: ADVANCED SUITS (Mark XLII+) ============ -->
+      <div class="suits-era" id="advancedSuits">
+        <div class="era-header">
+          <h3>Advanced Suits</h3>
+          <div class="era-line"></div>
+          <span class="era-count">Mark XLII — LXXXV · Post-Legion Era</span>
+        </div>
+
+        <div class="suits-grid">
+          <div class="suit-card" data-name="Mark XLII" data-mark="MARK XLII" data-desc="The Autonomous Prehensile Propulsion Suit — a revolutionary design where individual armor pieces could fly independently to Tony's body via mental command through implanted micro-repeaters. Despite being a prototype with numerous malfunctions, the Mark XLII played a critical role during the confrontation with Aldrich Killian. Tony ultimately used it as a bomb, commanding it to encase Killian and self-destruct." data-movie="Iron Man 3 (2013)" data-specs='{"Power Source":"New Element Arc Reactor","Special Feature":"Mental Command Assembly","Technology":"Subcutaneous Micro-Repeaters","Deploy Method":"Pieces Fly Individually to User","Weakness":"Prototype — Frequent Malfunctions","Weapons":"Repulsors, Unibeam","Status":"Self-Destructed on Killian"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Man Armor Mark XLII.webp" alt="Mark XLII" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK XLII</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark XLII</h4>
+              <span class="suit-alias">"Autonomous Prehensile"</span>
+              <p>Mental command assembly via micro-repeaters. Pieces fly independently to user. Prototype with malfunctions. Self-destructed on Killian.</p>
+              <span class="suit-movie">Iron Man 3 (2013)</span>
+            </div>
+          </div>
+
+          <div class="suit-card" data-name="Mark XLIII" data-mark="MARK XLIII" data-desc="The primary combat suit during the Age of Ultron. Redesigned from the Mark XLII with improved reliability and the addition of Sentry Mode — allowing the suit to operate autonomously as a guard. Features enhanced repulsors, improved flight systems, and compatibility with the Veronica Hulkbuster system." data-movie="Avengers: Age of Ultron (2015)" data-specs='{"Power Source":"New Element Arc Reactor","Special Feature":"Sentry Mode (Autonomous Guard)","Weapons":"Repulsors, Unibeam, Laser","Compatibility":"Veronica Hulkbuster System","AI Assistant":"J.A.R.V.I.S.","Status":"Damaged in Ultron Battle"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Man Armor Mark XLIII.webp" alt="Mark XLIII" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK XLIII</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark XLIII</h4>
+              <span class="suit-alias">"Sentry Mode"</span>
+              <p>Primary Ultron-era suit. Features Sentry Mode for autonomous guarding. Compatible with Veronica Hulkbuster add-on.</p>
+              <span class="suit-movie">Age of Ultron (2015)</span>
+            </div>
+          </div>
+
+          <div class="suit-card" data-name="Mark XLIV — Hulkbuster" data-mark="MARK XLIV" data-desc="Codenamed 'Veronica,' the Hulkbuster is a massive modular add-on armor designed to contain or subdue the Hulk. Deployed from a Stark Industries satellite, it encases the Mark XLIII and dramatically increases size, strength, and durability. Features replaceable parts that can be summoned individually, hydraulic power-fists, and extreme structural reinforcement. Used during the famous Johannesburg battle against a mind-controlled Hulk." data-movie="Avengers: Age of Ultron (2015)" data-specs='{"Codename":"Veronica","Type":"Anti-Hulk / Heavy Assault","Height":"~11 feet","Deployment":"Orbital Satellite Pod","Special Feature":"Modular Replaceable Parts","Strength":"Class 175+ Tons","Weapons":"Hydraulic Power-Fists, Repulsors","Status":"Heavily Damaged vs. Hulk"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Man Armor Mark XLIV.webp" alt="Mark XLIV - Hulkbuster" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK XLIV</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark XLIV</h4>
+              <span class="suit-alias">"Hulkbuster / Veronica"</span>
+              <p>11-foot modular armor deployed from satellite. Designed to contain the Hulk. Replaceable parts, hydraulic power-fists. 175+ ton strength.</p>
+              <span class="suit-movie">Age of Ultron (2015)</span>
+            </div>
+          </div>
+
+          <div class="suit-card" data-name="Mark XLV" data-mark="MARK XLV" data-desc="Built quickly after the Mark XLIII was damaged, the Mark XLV was Tony's suit during the final battle in Sokovia against Ultron. First suit to use F.R.I.D.A.Y. as its AI assistant after J.A.R.V.I.S. became the Vision." data-movie="Avengers: Age of Ultron (2015)" data-specs='{"Power Source":"New Element Arc Reactor","Weapons":"Repulsors, Unibeam, Laser","AI Assistant":"F.R.I.D.A.Y. (First Use)","Special Feature":"First F.R.I.D.A.Y. Suit","Status":"Retired after Sokovia"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Man Armor Mark XLV.webp" alt="Mark XLV" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK XLV</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark XLV</h4>
+              <span class="suit-alias">"First F.R.I.D.A.Y. Suit"</span>
+              <p>Final Sokovia battle suit. First armor to use F.R.I.D.A.Y. AI after J.A.R.V.I.S. became the Vision.</p>
+              <span class="suit-movie">Age of Ultron (2015)</span>
+            </div>
+          </div>
+
+          <div class="suit-card" data-name="Mark XLVI" data-mark="MARK XLVI" data-desc="Tony's armor during the Avengers Civil War. Features a new modular nano-transformation system where the helmet forms from interlocking pieces stored in the back. Enhanced sensor suite, improved combat systems, and the ability to analyze opponents in real-time. Used during the Airport Battle and the final confrontation against Captain America and Winter Soldier." data-movie="Captain America: Civil War (2016)" data-specs='{"Power Source":"New Element Arc Reactor","Special Feature":"Folding Nano-Helmet","Weapons":"Repulsors, Unibeam, Mini-Missiles, Laser","AI Assistant":"F.R.I.D.A.Y.","Sensor Suite":"Real-Time Combat Analysis","Status":"Heavily Damaged by Cap Shield"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Man Armor Mark XLVI.webp" alt="Mark XLVI" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK XLVI</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark XLVI</h4>
+              <span class="suit-alias">"Civil War Suit"</span>
+              <p>Modular folding nano-helmet. Real-time combat analysis. Used at the Airport Battle. Damaged by Cap's shield.</p>
+              <span class="suit-movie">Civil War (2016)</span>
+            </div>
+          </div>
+
+          <div class="suit-card" data-name="Mark XLVII" data-mark="MARK XLVII" data-desc="A remote-operated suit used during the Spider-Man: Homecoming era. Tony could pilot this armor remotely from anywhere, allowing him to assist Peter Parker while being physically elsewhere. Featured the same combat systems as the Mark XLVI." data-movie="Spider-Man: Homecoming (2017)" data-specs='{"Power Source":"New Element Arc Reactor","Special Feature":"Full Remote Operation","Weapons":"Repulsors, Unibeam","AI Assistant":"F.R.I.D.A.Y.","User":"Remote-Controlled by Tony Stark","Status":"Retired"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Man Armor Mark XLVII.webp" alt="Mark XLVII" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK XLVII</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark XLVII</h4>
+              <span class="suit-alias">"Remote Pilot"</span>
+              <p>Fully remote-operated suit. Tony piloted it from afar to assist Spider-Man during the Homecoming events.</p>
+              <span class="suit-movie">Homecoming (2017)</span>
+            </div>
+          </div>
+
+          <div class="suit-card" data-name="Mark XLVIII — Hulkbuster 2.0" data-mark="MARK XLVIII" data-desc="The second generation Hulkbuster armor, updated and improved from the original Veronica. Used by Bruce Banner during the Battle of Wakanda against Thanos's Outrider army, as Banner could not transform into the Hulk at the time." data-movie="Avengers: Infinity War (2018)" data-specs='{"Type":"Anti-Hulk / Heavy Assault v2","Height":"~11 feet","User":"Bruce Banner","Special Feature":"Updated for Non-Hulk User","Weapons":"Repulsors, Power-Fists","Deployed In":"Battle of Wakanda","Status":"Survived"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Man Armor Mark XLVIII.webp" alt="Mark XLVIII" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK XLVIII</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark XLVIII</h4>
+              <span class="suit-alias">"Hulkbuster 2.0"</span>
+              <p>Updated Hulkbuster used by Bruce Banner at the Battle of Wakanda. Redesigned for non-Hulk pilots.</p>
+              <span class="suit-movie">Infinity War (2018)</span>
+            </div>
+          </div>
+
+          <div class="suit-card" data-name="Mark XLIX — Rescue" data-mark="MARK XLIX" data-desc="The Rescue armor — a suit designed specifically for Pepper Potts. Featuring a blue and silver color scheme, it was equipped with powerful repulsors, flight capability, and advanced defensive systems. Pepper used it during the final battle against Thanos in Endgame, fighting alongside Tony." data-movie="Avengers: Endgame (2019)" data-specs='{"Codename":"Rescue","User":"Pepper Potts","Color":"Blue & Silver","Weapons":"Repulsors, Energy Shield","Special Feature":"Designed for Pepper Potts","AI Assistant":"F.R.I.D.A.Y.","Status":"Active"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Man Armor Mark XLIX.webp" alt="Mark XLIX - Rescue" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK XLIX</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark XLIX</h4>
+              <span class="suit-alias">"Rescue — Pepper's Suit"</span>
+              <p>Blue and silver suit designed for Pepper Potts. Used in the final battle against Thanos alongside Tony.</p>
+              <span class="suit-movie">Endgame (2019)</span>
+            </div>
+          </div>
+
+          <div class="suit-card" data-name="Mark L — Bleeding Edge" data-mark="MARK L" data-desc="The Bleeding Edge suit — Tony's first nano-technology armor. Stored in a housing unit on his chest, the suit deploys using billions of nanobots that form any shape: weapons, shields, wings, or additional armor plating. The nanoparticles can self-repair and reconfigure in real-time during combat. Tony used this suit against the Black Order in New York and during the climactic battle against Thanos on Titan, where the suit was ultimately depleted." data-movie="Avengers: Infinity War (2018)" data-specs='{"Power Source":"Arc Reactor Nano-Housing","Technology":"Nanoparticle Construction","Weapons":"Shape-shifting (Blades, Hammer, Shield, Battering Ram)","Special Feature":"Self-Repairing Nanotech","AI Assistant":"F.R.I.D.A.Y.","Combat":"Vs. Cull Obsidian, Ebony Maw, Thanos","Weakness":"Finite Nanoparticle Supply","Status":"Depleted on Titan"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Man Armor Mark L.webp" alt="Mark L - Bleeding Edge" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK L</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark L</h4>
+              <span class="suit-alias">"Bleeding Edge — Nano-Tech"</span>
+              <p>First nanotech armor. Billions of nanobots form any weapon or shield. Self-repairing. Depleted fighting Thanos on Titan.</p>
+              <span class="suit-movie">Infinity War (2018)</span>
+            </div>
+          </div>
+
+          <div class="suit-card" data-name="Mark LXXXV — The Final Suit" data-mark="MARK LXXXV" data-desc="The final and most advanced Iron Man armor ever created. An evolution of the Mark L's nanotech with dramatically improved nanoparticle capacity, durability, and power output. The Mark LXXXV's defining feature is its compatibility with the Infinity Stones — Tony engineered the right gauntlet to transfer the Stones from Thanos's Nano Gauntlet to his own armor. In the climactic moment of Endgame, Tony snapped his fingers wielding all six Infinity Stones, destroying Thanos and his army but sacrificing his own life. His final words: 'I am Iron Man.'" data-movie="Avengers: Endgame (2019)" data-specs='{"Power Source":"Advanced Arc Reactor","Technology":"Enhanced Nanoparticles (Next-Gen)","Weapons":"All Mark L + Enhanced Output","Special Feature":"Infinity Stone Compatible Gauntlet","AI Assistant":"F.R.I.D.A.Y.","The Snap":"Used All 6 Infinity Stones","User":"Tony Stark (Final Battle)","Status":"Final Suit — I Am Iron Man"}'>
+            <div class="suit-card-image">
+              <img src="../source/All Suits/Iron Man Armor Mark LXXXV.webp" alt="Mark LXXXV - The Final Suit" loading="lazy">
+              <div class="suit-card-overlay"></div>
+              <span class="suit-card-mark">MARK LXXXV</span>
+            </div>
+            <div class="suit-card-info">
+              <h4>Mark LXXXV</h4>
+              <span class="suit-alias">"The Final Suit — I Am Iron Man"</span>
+              <p>The most advanced armor ever built. Infinity Stone compatible nano-gauntlet. Tony's last stand. "I am Iron Man."</p>
+              <span class="suit-movie">Endgame (2019)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Suit Detail Modal -->
+  <div class="suit-modal-overlay" id="suitModal">
+    <div class="suit-modal">
+      <div class="suit-modal-header">
+        <img id="modalImage" src="" alt="">
+        <button class="suit-modal-close" id="modalClose" aria-label="Close modal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="suit-modal-body">
+        <span class="suit-modal-mark" id="modalMark"></span>
+        <h2 id="modalName"></h2>
+        <p id="modalDesc"></p>
+        <p id="modalMovie" style="font-family:var(--font-mono);font-size:var(--fs-sm);color:var(--arc-blue);"></p>
+        <div class="suit-modal-specs" id="modalSpecs"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">STARK<span style="color: var(--arc-blue);">.</span></div>
+          <p>A tribute to the genius, billionaire, playboy, philanthropist who saved the universe.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="appearances.html">Appearances</a>
+        </div>
+        <div class="footer-column">
+          <h4>Explore</h4>
+          <a href="works.html">Works</a>
+          <a href="suits.html">Suits</a>
+          <a href="timeline.html">Timeline</a>
+        </div>
+        <div class="footer-column">
+          <h4>System</h4>
+          <a href="#">Back to Top</a>
+          <a href="about.html">Credits</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Stark Industries — All Rights Reserved.</p>
+        <div class="footer-status">
+          <span class="status-dot"></span>
+          J.A.R.V.I.S. System Online
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/suits.js"></script>
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tony Stark — Genius inventor, founder of Stark Industries, creator of the Iron Man suits, and core member of the Avengers. Explore the legacy of the most iconic Marvel character.">
+  <meta name="keywords" content="Tony Stark, Iron Man, Marvel, Avengers, Stark Industries, MCU">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tony Stark — The Iron Legacy">
+  <meta property="og:description" content="Explore the genius, the technology, and the legend of Tony Stark.">
+  <meta property="og:type" content="website">
+
+  <title>Tony Stark — The Iron Legacy</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/global.css?v=2">
+  <link rel="stylesheet" href="../css/components.css?v=2">
+  <link rel="stylesheet" href="../css/home.css?v=2">
+
+  <!-- Favicon (arc reactor) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='none' stroke='%23e62429' stroke-width='6'/><circle cx='50' cy='50' r='20' fill='none' stroke='%23e62429' stroke-width='4'/><circle cx='50' cy='50' r='8' fill='%23e62429'/></svg>">
+</head>
+<body class="home-page">
+
+  <!-- ========== GLOBAL VIDEO BACKGROUND ========== -->
+  <video class="home-page-bg" id="bgVideo" autoplay muted loop playsinline>
+    <source src="../source/Iron Video Project.mp4" type="video/mp4">
+  </video>
+
+  <!-- ========== PAGE LOADER ========== -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-reactor">
+      <div class="loader-ring loader-ring-1"></div>
+      <div class="loader-ring loader-ring-2"></div>
+      <div class="loader-ring loader-ring-3"></div>
+      <div class="loader-core"></div>
+    </div>
+  </div>
+
+  <!-- ========== SCAN LINE OVERLAY ========== -->
+  <div class="scanline-overlay"></div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo">
+        <img src="../source/iron_logo_transparent.png" alt="Iron Man Logo">
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="appearances.html">Appearances</a>
+        <a href="works.html">Works</a>
+        <a href="suits.html">Suits</a>
+        <a href="timeline.html">Timeline</a>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div class="nav-mobile" id="navMobile">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="appearances.html">Appearances</a>
+      <a href="works.html">Works</a>
+      <a href="suits.html">Suits</a>
+      <a href="timeline.html">Timeline</a>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero">
+    <!-- Background Layers -->
+    <div class="hero-bg">
+      <div class="hero-bg-gradient"></div>
+      <div class="hero-bg-grid"></div>
+    </div>
+
+    <!-- Particle Canvas -->
+    <div class="hero-particles">
+      <canvas id="particleCanvas"></canvas>
+    </div>
+
+    <!-- Arc Reactor Decorative -->
+    <div class="arc-reactor-deco top-right">
+      <div class="arc-reactor-ring ring-1"></div>
+      <div class="arc-reactor-ring ring-2"></div>
+      <div class="arc-reactor-ring ring-3"></div>
+      <div class="arc-reactor-core"></div>
+    </div>
+
+    <!-- HUD Corner Decorations -->
+    <div class="hud-corner top-left"></div>
+    <div class="hud-corner top-right"></div>
+    <div class="hud-corner bottom-left"></div>
+    <div class="hud-corner bottom-right"></div>
+
+    <!-- Floating HUD Data -->
+    <div class="hud-data data-1">
+      SYS.STATUS: ONLINE<br>
+      ARC_REACTOR: 100%<br>
+      SUIT_INTEGRITY: NOMINAL
+    </div>
+    <div class="hud-data data-2">
+      JARVIS v4.2.1<br>
+      THREAT_LEVEL: LOW<br>
+      REPULSOR_PWR: READY
+    </div>
+    <div class="hud-data data-3">
+      LOCATION: STARK_TOWER<br>
+      LAT: 40.7484° N<br>
+      LONG: 73.9857° W
+    </div>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+
+      <!-- Main Title -->
+      <h1 class="hero-title">
+        <span class="title-line">
+          <span class="title-text title-first">TONY</span>
+        </span>
+        <span class="title-line">
+          <span class="title-text title-last">STARK</span>
+        </span>
+      </h1>
+
+      <!-- Typewriter Subtitle -->
+      <div class="hero-subtitle" id="heroSubtitle">
+        <span class="cursor"></span>
+      </div>
+
+      <!-- Description -->
+      <p class="hero-description">
+        Founder of Stark Industries. Creator of the Iron Man armors. 
+        A genius inventor and engineer who redefined what it means to be a hero. 
+        From building the first Arc Reactor in a cave to making the ultimate sacrifice 
+        to save the universe — Tony Stark is the most iconic character in the Marvel universe.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="hero-buttons">
+        <a href="timeline.html" class="btn btn-primary" id="btnExplore">
+          Explore Journey
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="suits.html" class="btn btn-secondary" id="btnSuits">
+          View Suits
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </a>
+      </div>
+
+
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <span class="scroll-text">Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========== QUOTE SECTION ========== -->
+  <section class="quote-section">
+    <div class="container">
+      <p class="quote-text">
+        I am Iron Man. The truth is... I am Iron Man.
+      </p>
+      <p class="quote-attribution">— Tony Stark, 2008 & 2023</p>
+    </div>
+  </section>
+
+  <!-- ========== OVERVIEW SECTION ========== -->
+  <section class="overview-section" id="overview">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="section-header">
+        <span class="section-subtitle">// System Overview</span>
+        <h2>The Stark Legacy</h2>
+        <p class="section-description">
+          From a weapons manufacturer to the world's greatest protector. 
+          Explore the pillars of Tony Stark's extraordinary journey.
+        </p>
+      </div>
+
+      <!-- Stark Legacy Responsive Content Layout -->
+      <div class="legacy-content-layout">
+        
+        <!-- Left Column: Editorial & Stats Dashboard (Sticky) -->
+        <div class="legacy-editorial">
+          <span class="editorial-tag">// Legacy Archive</span>
+          <blockquote class="editorial-quote">
+            "Part of the journey is the end."
+          </blockquote>
+          <p class="editorial-text">
+            Anthony Edward "Tony" Stark was a visionary engineer, founding member of the Avengers, and the ultimate protector of Earth. From refining his father's designs in a cave to engineering the math behind quantum time travel, his intellectual achievements fueled global progress while his human choices saved the cosmos from total erasure.
+          </p>
+          
+          <!-- HUD Micro-Stats Panel -->
+          <div class="editorial-stats">
+            <div class="stat-item">
+              <span class="stat-value">85</span>
+              <span class="stat-desc">Armors Built</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">4</span>
+              <span class="stat-desc">Mainframe AIs</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">1</span>
+              <span class="stat-desc">Synthesized Element</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">3000</span>
+              <span class="stat-desc">Devotion Index</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Historical Legacy Pillars -->
+        <div class="legacy-pillars">
+          
+          <!-- Pillar 1: Arc Reactor & Element Synthesis -->
+          <div class="legacy-pillar" id="pillarArcReactor">
+            <div class="pillar-header">
+              <div class="pillar-meta">
+                <span class="pillar-number">01</span>
+                <span class="pillar-era">2008 - 2010</span>
+              </div>
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <circle cx="12" cy="12" r="5"/>
+                  <path d="M12 2v4M12 18v4M2 12h4M18 12h4"/>
+                  <path d="M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="pillar-title">Clean Energy & Element Synthesis</h3>
+            <p class="pillar-body">
+              Forced to survive in captivity, Tony miniaturized his father's <span class="pillar-highlight">Arc Reactor</span> technology to power an electromagnet keeping shrapnel from his heart, simultaneously fueling the crude Mark I armor. Upon discovering the palladium core was poisoning him, he constructed a makeshift particle accelerator in his workshop to synthesize an entirely new, stable, non-toxic element. This discovery completely replaced heavy fossil fuels at Stark Industries and powered clean energy grids globally.
+            </p>
+          </div>
+
+          <!-- Pillar 2: Pioneers of Artificial Intelligence -->
+          <div class="legacy-pillar" id="pillarAIMainframe">
+            <div class="pillar-header">
+              <div class="pillar-meta">
+                <span class="pillar-number">02</span>
+                <span class="pillar-era">2008 - 2024</span>
+              </div>
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                  <line x1="8" y1="21" x2="16" y2="21"/>
+                  <line x1="12" y1="17" x2="12" y2="21"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="pillar-title">Cognitive Mainframes & Tactical AIs</h3>
+            <p class="pillar-body">
+              Tony engineered advanced cognitive systems to manage his armored iterations and estates. His primary matrix, <span class="pillar-highlight">J.A.R.V.I.S.</span>, eventually served as the core template for the synthetic Avenger, Vision. Following J.A.R.V.I.S.'s transition, Tony developed <span class="pillar-highlight">F.R.I.D.A.Y.</span> to act as his integrated battlefield tactician, and posthumously bequeathed <span class="pillar-highlight">E.D.I.T.H.</span>—a tactical orbital defense satellite network—to Peter Parker as a final measure of global guardianship.
+            </p>
+          </div>
+
+          <!-- Pillar 3: Nanotechnology & Quantum Time Travel -->
+          <div class="legacy-pillar" id="pillarNanoQuantum">
+            <div class="pillar-header">
+              <div class="pillar-meta">
+                <span class="pillar-number">03</span>
+                <span class="pillar-era">2018 - 2023</span>
+              </div>
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12s4.48 10 10 10"/>
+                  <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6"/>
+                  <path d="M6 12c0-1.66 1.34-3 3-3s3 1.34 3 3"/>
+                  <circle cx="12" cy="12" r="1"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="pillar-title">Nanotech Engineering & Quantum Navigation</h3>
+            <p class="pillar-body">
+              In his final years, Stark elevated armor design to the molecular level, launching the self-assembling <span class="pillar-highlight">nanotechnology</span> seen in the Mark L and Mark LXXXV. When the universe faced total population loss, he retired to a quiet cabin with Pepper Potts and their daughter Morgan Stark. However, his sense of duty pulled him back, leading him to model and solve the mathematical GPS coordinates for quantum time-travel using a holographic <span class="pillar-highlight">Möbius strip</span> projection, making the Time Heist possible.
+            </p>
+          </div>
+
+          <!-- Pillar 4: Avengers founding & Final Sacrifice -->
+          <div class="legacy-pillar" id="pillarFinalSacrifice">
+            <div class="pillar-header">
+              <div class="pillar-meta">
+                <span class="pillar-number">04</span>
+                <span class="pillar-era">2012 - 2023</span>
+              </div>
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="pillar-title">Avengers Leadership & The Final Snap</h3>
+            <p class="pillar-body">
+              As the main financier and co-leader of the Avengers, Tony's legacy is defined by his protection of others. He closed Stark Industries' weapons division, financed the Avengers Mansion and Compound, and mentored young Peter Parker. During the Battle of Earth, he constructed the <span class="pillar-highlight">Nano Gauntlet</span> to channel the six Infinity Stones, performing the final snap that erased Thanos and his armies. His final sacrifice saved trillions of lives, forever cementing his words: <span class="pillar-highlight">"I am Iron Man."</span>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <div class="footer-logo">STARK<span style="color: var(--arc-blue);">.</span></div>
+          <p>
+            A tribute to the genius, billionaire, playboy, philanthropist 
+            who saved the universe. This is a fan-made portfolio website 
+            dedicated to the legacy of Tony Stark.
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <div class="footer-column">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="appearances.html">Appearances</a>
+        </div>
+
+        <!-- Explore -->
+        <div class="footer-column">
+          <h4>Explore</h4>
+          <a href="works.html">Works</a>
+          <a href="suits.html">Suits</a>
+          <a href="timeline.html">Timeline</a>
+        </div>
+
+        <!-- System -->
+        <div class="footer-column">
+          <h4>System</h4>
+          <a href="#hero">Back to Top</a>
+          <a href="about.html">Credits</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Stark Industries — All Rights Reserved. Property of Stark Industries.</p>
+        <div class="footer-status">
+          <span class="status-dot"></span>
+          J.A.R.V.I.S. System Online
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== MUTE TOGGLE BUTTON ========== -->
+  <button class="mute-btn" id="muteBtn" aria-label="Toggle background video sound">
+    <!-- Icon: Volume X (Muted state) -->
+    <svg class="icon-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <line x1="23" y1="9" x2="17" y2="15"></line>
+      <line x1="17" y1="9" x2="23" y2="15"></line>
+    </svg>
+    <!-- Icon: Volume 2 (Unmuted state) -->
+    <svg class="icon-unmuted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+    </svg>
+  </button>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 15l-6-6-6 6"/>
+    </svg>
+  </button>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="../js/main.js"></script>
+  <script src="../js/home.js"></script>
+</body>
+</html>

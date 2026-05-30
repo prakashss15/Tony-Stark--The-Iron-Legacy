@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tony Stark Timeline — Follow the complete journey from genius billionaire to Earth's mightiest hero across the Marvel Cinematic Universe.">
+  <title>Timeline — Tony Stark | The Iron Legacy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/timeline.css">
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='none' stroke='%23e62429' stroke-width='6'/><circle cx='50' cy='50' r='20' fill='none' stroke='%23e62429' stroke-width='4'/><circle cx='50' cy='50' r='8' fill='%23e62429'/></svg>">
+</head>
+<body>
+
+  <div class="page-loader"><div class="loader-reactor">
+    <div class="loader-ring loader-ring-1"></div>
+    <div class="loader-ring loader-ring-2"></div>
+    <div class="loader-ring loader-ring-3"></div>
+    <div class="loader-core"></div>
+  </div></div>
+  <div class="scanline-overlay"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="../source/iron_logo_transparent.png" alt="Iron Man Logo">
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="appearances.html">Appearances</a>
+        <a href="works.html">Works</a>
+        <a href="suits.html">Suits</a>
+        <a href="timeline.html" class="active">Timeline</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="appearances.html">Appearances</a>
+      <a href="works.html">Works</a>
+      <a href="suits.html">Suits</a>
+      <a href="timeline.html" class="active">Timeline</a>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <header class="works-page-header">
+    <div class="container">
+      <div class="header-hud-line"></div>
+      <span class="section-subtitle" style="display:block; margin-bottom: var(--space-md); font-family: var(--font-mono); color: var(--arc-blue); letter-spacing: 0.25em; text-transform: uppercase;">// Temporal Log</span>
+      <h1 class="header-title">
+        <span class="wht-text" data-text="THE STARK">THE STARK</span>
+        <span class="wht-text wht-accent" data-text="TIMELINE">TIMELINE</span>
+      </h1>
+      <p class="page-subtitle" style="font-size: var(--fs-sm); color: var(--text-secondary); margin-top: var(--space-sm);">From Prodigy to Legend</p>
+    </div>
+  </header>
+
+  <!-- Timeline Content -->
+  <section class="section">
+    <div class="container">
+      <div class="timeline-container">
+
+        <!-- 1970 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">1970</span>
+            <h3>Born a Stark</h3>
+            <p>Anthony Edward Stark is born to Howard and Maria Stark. Son of the legendary weapons developer and co-founder of S.H.I.E.L.D.</p>
+            <span class="timeline-tag">Origin</span>
+          </div>
+        </div>
+
+        <!-- 1984 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">1984</span>
+            <h3>Builds First Circuit Board</h3>
+            <p>At age 4, Tony builds his first circuit board. By age 6, he builds his first engine. A prodigy who would one day redefine technology itself.</p>
+            <span class="timeline-tag">Genius</span>
+          </div>
+        </div>
+
+        <!-- 1988 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">1988</span>
+            <h3>MIT at 17</h3>
+            <p>Tony graduates summa cum laude from MIT with dual degrees in physics and engineering. The youngest graduate in the school's history.</p>
+            <span class="timeline-tag">Education</span>
+          </div>
+        </div>
+
+        <!-- 1991 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">1991</span>
+            <h3>Loss of Parents</h3>
+            <p>Howard and Maria Stark are killed in what appears to be a car accident. Tony, now 21, inherits Stark Industries and becomes the world's youngest CEO of a Fortune 500 company.</p>
+            <span class="timeline-tag">Tragedy</span>
+          </div>
+        </div>
+
+        <!-- 2008 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2008</span>
+            <h3>Captured in Afghanistan</h3>
+            <p>During a weapons demonstration, Tony is captured by the Ten Rings terrorist group. Gravely injured by his own Jericho missile, he builds the Mark I suit in a cave with a box of scraps — and escapes.</p>
+            <span class="timeline-tag">Iron Man</span>
+          </div>
+        </div>
+
+        <!-- 2008 (continued) -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2008</span>
+            <h3>"I Am Iron Man"</h3>
+            <p>Tony reveals his identity to the world, breaking the superhero convention of secret identities. Builds the iconic Mark III suit and defeats Obadiah Stane (Iron Monger). Stark Industries pivots from weapons to clean energy.</p>
+            <span class="timeline-tag">Revelation</span>
+          </div>
+        </div>
+
+        <!-- 2010 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2010</span>
+            <h3>Palladium Poisoning & New Element</h3>
+            <p>The Arc Reactor's palladium core is slowly killing Tony. With help from his father's hidden research, he creates a new element to power the reactor. Battles Ivan Vanko (Whiplash) and meets Black Widow (Natasha Romanoff).</p>
+            <span class="timeline-tag">Iron Man 2</span>
+          </div>
+        </div>
+
+        <!-- 2012 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2012</span>
+            <h3>The Battle of New York</h3>
+            <p>Tony joins the newly formed Avengers to fight Loki's Chitauri invasion. He carries a nuclear missile through a portal into space, nearly sacrificing himself to save Manhattan. This event haunts him with PTSD.</p>
+            <span class="timeline-tag">Avengers</span>
+          </div>
+        </div>
+
+        <!-- 2013 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2013</span>
+            <h3>The Mandarin & Iron Legion</h3>
+            <p>Haunted by anxiety after New York, Tony obsessively builds the Iron Legion — 35 suits, each with unique capabilities. Faces the Mandarin and Aldrich Killian, and destroys all his suits in the "Clean Slate" protocol.</p>
+            <span class="timeline-tag">Iron Man 3</span>
+          </div>
+        </div>
+
+        <!-- 2015 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2015</span>
+            <h3>Ultron & The Vision</h3>
+            <p>Tony creates the Ultron AI as a peacekeeping program, which goes rogue and threatens humanity. Deploys the Hulkbuster to fight a mind-controlled Hulk. Helps create the Vision from J.A.R.V.I.S. to stop Ultron.</p>
+            <span class="timeline-tag">Age of Ultron</span>
+          </div>
+        </div>
+
+        <!-- 2016 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2016</span>
+            <h3>Civil War</h3>
+            <p>The Avengers split over the Sokovia Accords. Tony supports government oversight while Steve Rogers opposes it. Tony discovers the Winter Soldier killed his parents, leading to a devastating fight with Captain America.</p>
+            <span class="timeline-tag">Civil War</span>
+          </div>
+        </div>
+
+        <!-- 2017 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2017</span>
+            <h3>Mentoring Spider-Man</h3>
+            <p>Tony becomes a mentor to Peter Parker, providing him with advanced technology. Though he keeps Peter at arm's length, Tony becomes a father figure — a role he never expected but grew to cherish.</p>
+            <span class="timeline-tag">Homecoming</span>
+          </div>
+        </div>
+
+        <!-- 2018 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2018</span>
+            <h3>The Battle on Titan</h3>
+            <p>Tony deploys the nano-tech Mark L suit against Thanos on Titan. Despite everything, Thanos completes the Infinity Gauntlet and snaps half of all life away. Tony is stranded in space, near death.</p>
+            <span class="timeline-tag">Infinity War</span>
+          </div>
+        </div>
+
+        <!-- 2023 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2023</span>
+            <h3>The Time Heist</h3>
+            <p>After 5 years living a quiet life with Pepper and their daughter Morgan, Tony cracks time travel in a single night. He leads the Avengers on a Time Heist through the Quantum Realm to collect the Infinity Stones from the past.</p>
+            <span class="timeline-tag">Endgame</span>
+          </div>
+        </div>
+
+        <!-- 2023 - The Snap -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2023</span>
+            <h3>The Ultimate Sacrifice</h3>
+            <p>In the final battle against Thanos, Tony seizes the Infinity Stones from the gauntlet and performs the Snap — wiping out Thanos and his army. The power of all six stones kills Tony. His final words: <em>"I am Iron Man."</em></p>
+            <span class="timeline-tag" style="color:var(--danger-red);background:rgba(255,34,68,0.08);border-color:rgba(255,34,68,0.2);">I Am Iron Man</span>
+          </div>
+        </div>
+
+        <!-- Legacy -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">∞</span>
+            <h3>The Legacy Lives On</h3>
+            <p>Tony Stark's sacrifice saved trillions of lives across the universe. His legacy endures through Stark Industries, the technology he created, the heroes he inspired, and the daughter who carries his name. "I love you 3000."</p>
+            <span class="timeline-tag" style="color:var(--stark-gold);background:rgba(240,192,64,0.08);border-color:rgba(240,192,64,0.2);">Forever</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">STARK<span style="color: var(--arc-blue);">.</span></div>
+          <p>A tribute to the genius, billionaire, playboy, philanthropist who saved the universe.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="appearances.html">Appearances</a>
+        </div>
+        <div class="footer-column">
+          <h4>Explore</h4>
+          <a href="works.html">Works</a>
+          <a href="suits.html">Suits</a>
+          <a href="timeline.html">Timeline</a>
+        </div>
+        <div class="footer-column">
+          <h4>System</h4>
+          <a href="#">Back to Top</a>
+          <a href="about.html">Credits</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Stark Industries — All Rights Reserved.</p>
+        <div class="footer-status">
+          <span class="status-dot"></span>
+          J.A.R.V.I.S. System Online
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/timeline.js"></script>
+</body>
+</html>

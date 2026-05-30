@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tony Stark's MCU Movie Appearances — From Iron Man (2008) to Avengers: Endgame (2019), explore every film featuring the legendary Iron Man with screenshots.">
+  <title>Appearances — Tony Stark | The Iron Legacy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/appearances.css">
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='none' stroke='%23e62429' stroke-width='6'/><circle cx='50' cy='50' r='20' fill='none' stroke='%23e62429' stroke-width='4'/><circle cx='50' cy='50' r='8' fill='%23e62429'/></svg>">
+</head>
+<body>
+
+  <div class="page-loader"><div class="loader-reactor">
+    <div class="loader-ring loader-ring-1"></div>
+    <div class="loader-ring loader-ring-2"></div>
+    <div class="loader-ring loader-ring-3"></div>
+    <div class="loader-core"></div>
+  </div></div>
+  <div class="scanline-overlay"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="../source/iron_logo_transparent.png" alt="Iron Man Logo">
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="appearances.html" class="active">Appearances</a>
+        <a href="works.html">Works</a>
+        <a href="suits.html">Suits</a>
+        <a href="timeline.html">Timeline</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="appearances.html" class="active">Appearances</a>
+      <a href="works.html">Works</a>
+      <a href="suits.html">Suits</a>
+      <a href="timeline.html">Timeline</a>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <header class="works-page-header">
+    <div class="container">
+      <div class="header-hud-line"></div>
+      <span class="section-subtitle" style="display:block; margin-bottom: var(--space-md); font-family: var(--font-mono); color: var(--arc-blue); letter-spacing: 0.25em; text-transform: uppercase;">// Film Database</span>
+      <h1 class="header-title">
+        <span class="wht-text" data-text="MCU">MCU</span>
+        <span class="wht-text wht-accent" data-text="APPEARANCES">APPEARANCES</span>
+      </h1>
+      <p class="page-subtitle" style="font-size: var(--fs-sm); color: var(--text-secondary); margin-top: var(--space-sm);">Select a movie to explore Tony Stark's appearances, chronological screenshots, and scene details.</p>
+    </div>
+  </header>
+
+  <!-- Appearances Content -->
+  <section class="section">
+    <div class="container-wide">
+      <div class="appearances-grid">
+
+        <!-- IRON MAN (2008) -->
+        <div class="movie-card" onclick="window.location.href='appearances-ironman1.html'">
+          <div class="movie-poster">
+            <img src="../source/Appearance/Iron_Man_Official_Poster1.webp" alt="Iron Man (2008) Poster" loading="lazy">
+            <div class="movie-poster-overlay">
+              <span class="movie-year-badge">2008</span>
+            </div>
+          </div>
+          <div class="movie-info">
+            <h3>Iron Man</h3>
+            <span class="movie-role">Lead Role — The Origin Story</span>
+            <p>Tony Stark builds the Mark I armor inside an Afghan cave to escape captivity, starting his legendary path as the armored Avenger.</p>
+            <div class="movie-suits">
+              <span class="movie-suit-tag">Mark I</span>
+              <span class="movie-suit-tag">Mark II</span>
+              <span class="movie-suit-tag">Mark III</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- IRON MAN 2 (2010) -->
+        <div class="movie-card" onclick="window.location.href='appearances-ironman2.html'">
+          <div class="movie-poster">
+            <img src="../source/Appearance/Iron_Man_2_Alternate_International_Official_Poster.webp" alt="Iron Man 2 Poster" loading="lazy">
+            <div class="movie-poster-overlay">
+              <span class="movie-year-badge">2010</span>
+            </div>
+          </div>
+          <div class="movie-info">
+            <h3>Iron Man 2</h3>
+            <span class="movie-role">Lead Role — Legacy Continues</span>
+            <p>Tony confronts palladium poisoning, Justin Hammer's rival weapon designs, Ivan Vanko's electrified lashes, and debuts his portable suitcase armor.</p>
+            <div class="movie-suits">
+              <span class="movie-suit-tag">Mark IV</span>
+              <span class="movie-suit-tag">Mark V</span>
+              <span class="movie-suit-tag">Mark VI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- THE AVENGERS (2012) -->
+        <div class="movie-card" onclick="window.location.href='appearances-avengers1.html'">
+          <div class="movie-poster">
+            <img src="../source/Appearance/Avengers_2012_poster.jpg" alt="The Avengers (2012) Poster" loading="lazy">
+            <div class="movie-poster-overlay">
+              <span class="movie-year-badge">2012</span>
+            </div>
+          </div>
+          <div class="movie-info">
+            <h3>The Avengers</h3>
+            <span class="movie-role">Lead Role — Earth's Mightiest Heroes</span>
+            <p>Tony joins Earth's newly assembled defenders to stop Loki's planetary invasion, carrying a nuclear warhead through a spatial wormhole into deep space.</p>
+            <div class="movie-suits">
+              <span class="movie-suit-tag">Mark VI</span>
+              <span class="movie-suit-tag">Mark VII</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- IRON MAN 3 (2013) -->
+        <div class="movie-card" onclick="window.location.href='appearances-ironman3.html'">
+          <div class="movie-poster">
+            <img src="../source/Appearance/Iron_Man_3_IMAX_poster1.webp" alt="Iron Man 3 Poster" loading="lazy">
+            <div class="movie-poster-overlay">
+              <span class="movie-year-badge">2013</span>
+            </div>
+          </div>
+          <div class="movie-info">
+            <h3>Iron Man 3</h3>
+            <span class="movie-role">Lead Role — The Mandarin & Extremis</span>
+            <p>Struggling with post-traumatic stress, Tony builds an army of armors to protect Pepper from Aldrich Killian's Extremis soldiers.</p>
+            <div class="movie-suits">
+              <span class="movie-suit-tag">Mark XLII</span>
+              <span class="movie-suit-tag">Silver Centurion</span>
+              <span class="movie-suit-tag">Iron Legion</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- AVENGERS: AGE OF ULTRON (2015) -->
+        <div class="movie-card" onclick="window.location.href='appearances-ageofultron.html'">
+          <div class="movie-poster">
+            <img src="../source/Appearance/Avengers_Age_of_Ultron_poster1.jpg" alt="Avengers: Age of Ultron Poster" loading="lazy">
+            <div class="movie-poster-overlay">
+              <span class="movie-year-badge">2015</span>
+            </div>
+          </div>
+          <div class="movie-info">
+            <h3>Avengers: Age of Ultron</h3>
+            <span class="movie-role">Lead Role — The Birth of Ultron</span>
+            <p>Seeking to engineer a shield around the planet, Tony uses the Mind Stone's artificial neural systems to build Ultron, which quickly goes rogue.</p>
+            <div class="movie-suits">
+              <span class="movie-suit-tag">Mark XLIII</span>
+              <span class="movie-suit-tag">Mark XLIV</span>
+              <span class="movie-suit-tag">Mark XLV</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CAPTAIN AMERICA: CIVIL WAR (2016) -->
+        <div class="movie-card" onclick="window.location.href='appearances-civilwar.html'">
+          <div class="movie-poster">
+            <img src="../source/Appearance/Captain_America_Civil_War_Chinese_Poster1.webp" alt="Captain America: Civil War Poster" loading="lazy">
+            <div class="movie-poster-overlay">
+              <span class="movie-year-badge">2016</span>
+            </div>
+          </div>
+          <div class="movie-info">
+            <h3>Captain America: Civil War</h3>
+            <span class="movie-role">Supporting Role — Divided We Fall</span>
+            <p>Divided over foreign oversight regulations, the Avengers break into warring factions, leading to a personal, shattering battle in Siberia.</p>
+            <div class="movie-suits">
+              <span class="movie-suit-tag">Mark XLVI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SPIDER-MAN: HOMECOMING (2017) -->
+        <div class="movie-card" onclick="window.location.href='appearances-homecoming.html'">
+          <div class="movie-poster">
+            <img src="../source/Appearance/Spider_Man_Homecoming_poster1.jpg" alt="Spider-Man: Homecoming Poster" loading="lazy">
+            <div class="movie-poster-overlay">
+              <span class="movie-year-badge">2017</span>
+            </div>
+          </div>
+          <div class="movie-info">
+            <h3>Spider-Man: Homecoming</h3>
+            <span class="movie-role">Supporting Role — The Mentor</span>
+            <p>Tony Stark takes on a fatherly mentoring role for young Peter Parker, providing a high-tech suit while offering advice on handling superhero duties.</p>
+            <div class="movie-suits">
+              <span class="movie-suit-tag">Mark XLVII</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- AVENGERS: INFINITY WAR (2018) -->
+        <div class="movie-card" onclick="window.location.href='appearances-infinitywar.html'">
+          <div class="movie-poster">
+            <img src="../source/Appearance/Avengers_Infinity_war_poster1.webp" alt="Avengers: Infinity War Poster" loading="lazy">
+            <div class="movie-poster-overlay">
+              <span class="movie-year-badge">2018</span>
+            </div>
+          </div>
+          <div class="movie-info">
+            <h3>Avengers: Infinity War</h3>
+            <span class="movie-role">Lead Role — The Beginning of the End</span>
+            <p>Tony Stark deploys his nanotechnology armor, clashing with the cosmic conqueror Thanos in a desperate battle to save the universe on Titan.</p>
+            <div class="movie-suits">
+              <span class="movie-suit-tag">Mark L (Nano)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- AVENGERS: ENDGAME (2019) -->
+        <div class="movie-card" onclick="window.location.href='appearances-endgame.html'">
+          <div class="movie-poster">
+            <img src="../source/Appearance/Avengers_endgame_poster1.jpg" alt="Avengers: Endgame Poster" loading="lazy">
+            <div class="movie-poster-overlay">
+              <span class="movie-year-badge">2019</span>
+            </div>
+          </div>
+          <div class="movie-info">
+            <h3>Avengers: Endgame</h3>
+            <span class="movie-role">Lead Role — I Am Iron Man</span>
+            <p>Tony Stark orchestrates a time heist to recover the Infinity Stones, ultimately making the supreme sacrifice to restore half of all life to the universe.</p>
+            <div class="movie-suits">
+              <span class="movie-suit-tag">Mark LXXXV</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">STARK<span style="color: var(--arc-blue);">.</span></div>
+          <p>A tribute to the genius, billionaire, playboy, philanthropist who saved the universe.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="appearances.html">Appearances</a>
+        </div>
+        <div class="footer-column">
+          <h4>Explore</h4>
+          <a href="works.html">Works</a>
+          <a href="suits.html">Suits</a>
+          <a href="timeline.html">Timeline</a>
+        </div>
+        <div class="footer-column">
+          <h4>System</h4>
+          <a href="#">Back to Top</a>
+          <a href="about.html">Credits</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Stark Industries — All Rights Reserved.</p>
+        <div class="footer-status">
+          <span class="status-dot"></span>
+          J.A.R.V.I.S. System Online
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="About Tony Stark — Learn about the genius inventor, his legacy, and the mission behind this tribute website.">
+  <title>About — Tony Stark | The Iron Legacy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Exo+2:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/about.css">
+
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='none' stroke='%23e62429' stroke-width='6'/><circle cx='50' cy='50' r='20' fill='none' stroke='%23e62429' stroke-width='4'/><circle cx='50' cy='50' r='8' fill='%23e62429'/></svg>">
+</head>
+
+<body>
+
+  <!-- Page Loader -->
+  <div class="page-loader">
+    <div class="loader-reactor">
+      <div class="loader-ring loader-ring-1"></div>
+      <div class="loader-ring loader-ring-2"></div>
+      <div class="loader-ring loader-ring-3"></div>
+      <div class="loader-core"></div>
+    </div>
+  </div>
+  <div class="scanline-overlay"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="../source/iron_logo_transparent.png" alt="Iron Man Logo">
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="appearances.html">Appearances</a>
+        <a href="works.html">Works</a>
+        <a href="suits.html">Suits</a>
+        <a href="timeline.html">Timeline</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="appearances.html">Appearances</a>
+      <a href="works.html">Works</a>
+      <a href="suits.html">Suits</a>
+      <a href="timeline.html">Timeline</a>
+    </div>
+  </nav>
+
+  <!-- About Hero -->
+  <header class="works-page-header">
+    <div class="container">
+      <div class="header-hud-line"></div>
+      <span class="section-subtitle" style="display:block; margin-bottom: var(--space-md); font-family: var(--font-mono); color: var(--arc-blue); letter-spacing: 0.25em; text-transform: uppercase;">// System Info</span>
+      <h1 class="header-title">
+        <span class="wht-text" data-text="ABOUT">ABOUT</span>
+        <span class="wht-text wht-accent" data-text="THIS WEBSITE">THIS WEBSITE</span>
+      </h1>
+      <p class="page-subtitle" style="font-size: var(--fs-sm); color: var(--text-secondary); margin-top: var(--space-sm);">Project Overview & Features</p>
+    </div>
+  </header>
+
+  <!-- Website Details Section -->
+  <section class="bio-section">
+    <div class="container">
+      <div class="bio-grid">
+        <div class="bio-image-wrapper">
+          <img src="../source/iron_man_tony_33.png" alt="Stark HUD" loading="lazy" style="filter: hue-rotate(0deg);">
+        </div>
+        <div class="bio-content">
+          <h2>A Tribute to Iron Man</h2>
+          <p>
+            This website is a premium, cinematic portfolio built as a tribute to Tony Stark.
+            It is designed to mimic the futuristic <span class="bio-highlight">Stark Industries HUD</span>,
+            providing an immersive, highly interactive experience that explores his legacy across the Marvel Cinematic
+            Universe.
+          </p>
+          <p>
+            The project features a custom-built <strong>Bright / Dark Theme System</strong>, allowing users to toggle
+            between the classic dark cyber-aesthetic and a clean, modern bright interface seamlessly.
+          </p>
+          <h3
+            style="color: var(--text-highlight); font-family: var(--font-heading); font-size: var(--fs-base); margin-top: var(--space-lg); letter-spacing: 0.1em; text-transform: uppercase;">
+            Key Features Included:</h3>
+          <ul
+            style="color: var(--text-secondary); line-height: 1.8; margin-left: var(--space-lg); margin-top: var(--space-sm); margin-bottom: var(--space-lg);">
+            <li><strong>Interactive Suits Gallery:</strong> Browse through an immersive gallery of Iron Man armors with
+              hover animations and detailed specifications.</li>
+            <li><strong>Dynamic Theme Toggle:</strong> A persistent theme switcher seamlessly transitions the entire
+              site between Dark and Bright modes using CSS variables and LocalStorage.</li>
+            <li><strong>Cinematic Animations:</strong> Powered by GSAP (GreenSock), featuring scroll-triggered reveals,
+              typewriter effects, and parallax scrolling.</li>
+            <li><strong>Responsive Design:</strong> Fully optimized for desktop, tablet, and mobile devices with a
+              custom mobile navigation menu.</li>
+            <li><strong>Interactive Timeline:</strong> A visual timeline charting Tony Stark's major milestones from
+              1970 to 2023.</li>
+          </ul>
+
+          <div class="tech-stack" style="margin-top: var(--space-xl);">
+            <span class="tech-badge">HTML5</span>
+            <span class="tech-badge">CSS3</span>
+            <span class="tech-badge">Vanilla JavaScript</span>
+            <span class="tech-badge">GSAP Animations</span>
+            <span class="tech-badge">Custom CSS Variables</span>
+          </div>
+
+          <p style="color: var(--text-tertiary); font-size: var(--fs-xs); margin-top: var(--space-2xl);">
+            * All images, characters, and related properties belong to Marvel Studios / Disney.
+            This is a non-commercial fan project showcasing modern web development techniques.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">STARK<span style="color: var(--arc-blue);">.</span></div>
+          <p>A tribute to the genius, billionaire, playboy, philanthropist who saved the universe.</p>
+        </div>
+        <div class="footer-column">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="appearances.html">Appearances</a>
+        </div>
+        <div class="footer-column">
+          <h4>Explore</h4>
+          <a href="works.html">Works</a>
+          <a href="suits.html">Suits</a>
+          <a href="timeline.html">Timeline</a>
+        </div>
+        <div class="footer-column">
+          <h4>System</h4>
+          <a href="#">Back to Top</a>
+          <a href="about.html">Credits</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Stark Industries — All Rights Reserved.</p>
+        <div class="footer-status">
+          <span class="status-dot"></span>
+          J.A.R.V.I.S. System Online
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M18 15l-6-6-6 6" />
+    </svg>
+  </button>
+
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

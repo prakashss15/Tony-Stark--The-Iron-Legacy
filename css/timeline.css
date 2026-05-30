@@ -1,0 +1,207 @@
+/* ============================================================
+   TONY STARK PORTFOLIO — TIMELINE PAGE STYLES
+   ============================================================ */
+
+.timeline-container {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 0 var(--space-xl);
+}
+
+/* Vertical Line */
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--arc-blue), var(--border-subtle) 20%, var(--border-subtle) 80%, transparent);
+}
+
+/* ---- Timeline Item ---- */
+.timeline-item {
+  position: relative;
+  display: flex;
+  margin-bottom: var(--space-lg);
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.timeline-item.revealed {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Alternating layout */
+.timeline-item:nth-child(odd) {
+  justify-content: flex-start;
+  padding-right: calc(50% + 30px);
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  justify-content: flex-end;
+  padding-left: calc(50% + 30px);
+  text-align: left;
+}
+
+/* Center node */
+.timeline-node {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--arc-blue);
+  border-radius: 50%;
+  background: var(--bg-primary);
+  z-index: 2;
+  transition: all var(--transition-base);
+}
+
+.timeline-item:hover .timeline-node {
+  background: var(--arc-blue);
+  box-shadow: 0 0 15px var(--arc-blue), 0 0 30px var(--arc-blue-glow);
+  transform: translateX(-50%) scale(1.3);
+}
+
+/* Content card */
+.timeline-content {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md) var(--space-xl);
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 10px;
+  height: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transform: rotate(45deg);
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+  right: -6px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+  left: -6px;
+  border-right: none;
+  border-top: none;
+}
+
+.timeline-item:hover .timeline-content {
+  border-color: var(--border-glow);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(230, 36, 41, 0.05);
+}
+
+.timeline-year {
+  font-family: var(--font-heading);
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  color: var(--arc-blue);
+  letter-spacing: 0.15em;
+  margin-bottom: var(--space-xs);
+  display: block;
+}
+
+.timeline-content h3 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-md);
+  font-weight: 600;
+  color: var(--text-highlight);
+  margin-bottom: var(--space-xs);
+  letter-spacing: 0.04em;
+}
+
+.timeline-content p {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.timeline-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--stark-gold);
+  background: rgba(240, 192, 64, 0.08);
+  border: 1px solid rgba(240, 192, 64, 0.2);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  margin-top: var(--space-sm);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .timeline-container::before {
+    left: 20px;
+  }
+
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    padding-left: 50px;
+    padding-right: 0;
+    text-align: left;
+    justify-content: flex-start;
+  }
+
+  .timeline-node {
+    left: 20px;
+  }
+
+  .timeline-item:hover .timeline-node {
+    transform: translateX(-50%) scale(1.3);
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content::before,
+  .timeline-item:nth-child(even) .timeline-content::before {
+    left: -6px;
+    right: auto;
+    border-right: none;
+    border-top: none;
+    border-left: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+}
+
+/* ============================================================
+   TIMELINE PAGE BACKGROUND IMAGE OVERRIDE
+   ============================================================ */
+body::before {
+  background-image: url('../source/edit-tony-stark-mobius-strip-Cropped.avif') !important;
+}
+
+/* ============================================================
+   TIMELINE PAGE — TIGHTER HERO & SECTION SPACING
+   ============================================================ */
+.page-hero {
+  padding: calc(70px + var(--space-md)) 0 var(--space-sm);
+}
+
+.page-hero h1 {
+  margin-bottom: var(--space-xs);
+}
+
+.page-hero .section-subtitle {
+  margin-bottom: var(--space-xs) !important;
+}
+
+.section {
+  padding-top: var(--space-sm);
+}

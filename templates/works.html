@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Tony Stark: Works & Inventions — Complete archive of Iron Man technology, Arc Reactor evolution, AI systems, weapons, and groundbreaking inventions from Stark Industries.">
+  <meta name="keywords"
+    content="Tony Stark, Iron Man, Arc Reactor, JARVIS, FRIDAY, EDITH, Repulsor, Nanotech, Stark Industries">
+  <title>Tony Stark — Works & Inventions</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&family=Exo+2:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/works.css">
+
+  <!-- Favicon -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='40' fill='none' stroke='%23e62429' stroke-width='6'/><circle cx='50' cy='50' r='20' fill='none' stroke='%23e62429' stroke-width='4'/><circle cx='50' cy='50' r='8' fill='%23e62429'/></svg>">
+</head>
+
+<body class="works-page">
+
+  <!-- ========== STARK OS BOOT LOADER ========== -->
+  <div class="stark-loader" id="starkLoader">
+    <div class="loader-reactor">
+      <div class="loader-ring loader-ring-1"></div>
+      <div class="loader-ring loader-ring-2"></div>
+      <div class="loader-ring loader-ring-3"></div>
+      <div class="loader-core"></div>
+    </div>
+    <div class="loader-text" id="loaderText">
+      <span class="loader-line">STARK OS v4.7.1</span>
+      <span class="loader-line">INITIALIZING SYSTEMS...</span>
+      <span class="loader-line">CONNECTING TO J.A.R.V.I.S.</span>
+      <span class="loader-line loader-status">ACCESS GRANTED</span>
+    </div>
+  </div>
+
+  <!-- ========== SCANLINE OVERLAY ========== -->
+  <div class="scanline-overlay"></div>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="../source/iron_logo_transparent.png" alt="Iron Man Logo">
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="appearances.html">Appearances</a>
+        <a href="works.html" class="active">Works</a>
+        <a href="suits.html">Suits</a>
+        <a href="timeline.html">Timeline</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="appearances.html">Appearances</a>
+      <a href="works.html" class="active">Works</a>
+      <a href="suits.html">Suits</a>
+      <a href="timeline.html">Timeline</a>
+    </div>
+  </nav>
+
+  <!-- ========== SCI-FI COMPACT HEADER ========== -->
+  <header class="works-page-header" id="worksHeader">
+    <div class="container">
+      <div class="header-hud-line"></div>
+      <h1 class="header-title">
+        <span class="wht-text" data-text="WORKS &">WORKS &</span>
+        <span class="wht-text wht-accent" data-text="INVENTIONS">INVENTIONS</span>
+      </h1>
+      
+      <!-- Quick Nav Pills -->
+      <div class="section-pills">
+        <a href="#arcReactor" class="pill" data-sound="click"><span class="pill-dot"></span> Arc Reactor</a>
+        <a href="#armors" class="pill" data-sound="click"><span class="pill-dot"></span> Armors & Suits</a>
+        <a href="#aiSystems" class="pill" data-sound="click"><span class="pill-dot"></span> AI Mainframes</a>
+        <a href="#timeTravel" class="pill" data-sound="click"><span class="pill-dot"></span> Time Navigation</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== ARC REACTOR & ELEMENT SYNTHESIS ========== -->
+  <section class="w-section" id="arcReactor">
+    <div class="container">
+      <div class="w-section-header">
+        <span class="w-section-tag">// Core Energy System</span>
+        <h2>Arc Reactor Technology</h2>
+        <p class="w-section-desc">The foundation of every Stark invention — a miniaturized, self-sustaining energy source capable of powering an entire city, small enough to fit in a human chest.</p>
+      </div>
+
+
+
+      <!-- Reactor Evolution Gallery Grid -->
+      <div class="reactor-cards-grid">
+        <!-- Mark I -->
+        <div class="reactor-evol-card glass-hud" data-sound="hover">
+          <div class="evol-card-glow"></div>
+          <div class="evol-img-wrap">
+            <img src="../source/works/Arc Reactor mark1.jpg" alt="Arc Reactor Mark I">
+            <div class="hud-frame-corners"></div>
+            <div class="hud-scanner"></div>
+          </div>
+          <div class="evol-info">
+            <span class="evol-tag">MARK I // PALLADIUM CORE</span>
+            <h3>The Cave Inception</h3>
+            <p>Built in a cave from missile scrap. Powered Tony's first suit and kept shrapnel from his heart, but caused slow palladium poisoning.</p>
+            <div class="evol-specs">
+              <span class="evol-spec-item">Fuel: Pd-103</span>
+              <span class="evol-spec-item">Output: 3 GJ/s</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mark XXIII -->
+        <div class="reactor-evol-card glass-hud" data-sound="hover">
+          <div class="evol-card-glow"></div>
+          <div class="evol-img-wrap">
+            <img src="../source/works/Arc Reactor mark23.jpg" alt="Arc Reactor Mark XXIII">
+            <div class="hud-frame-corners"></div>
+            <div class="hud-scanner"></div>
+          </div>
+          <div class="evol-info">
+            <span class="evol-tag">MARK XXIII // NEW ELEMENT</span>
+            <h3>Badassium Isotope</h3>
+            <p>Synthesized via a Malibu workshop particle accelerator, using atomic secrets hidden by Howard Stark in the Expo '74 model.</p>
+            <div class="evol-specs">
+              <span class="evol-spec-item">Fuel: Vibranium Isotope</span>
+              <span class="evol-spec-item">Output: 8 GJ/s</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mark LXXXV -->
+        <div class="reactor-evol-card glass-hud" data-sound="hover">
+          <div class="evol-card-glow"></div>
+          <div class="evol-img-wrap">
+            <img src="../source/works/arc reactor mark85.png" alt="Arc Reactor Mark LXXXV">
+            <div class="hud-frame-corners"></div>
+            <div class="hud-scanner"></div>
+          </div>
+          <div class="evol-info">
+            <span class="evol-tag">MARK LXXXV // NANOTECH</span>
+            <h3>Nanotech Integration</h3>
+            <p>The pinnacle of energy design. Housed in a nanotech chest unit, capable of power regeneration, weapons generation, and Infinity Snap stability.</p>
+            <div class="evol-specs">
+              <span class="evol-spec-item">Fuel: Nanotech Core</span>
+              <span class="evol-spec-item">Output: 15+ GJ/s</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== IRON MAN ARMORS SECTION ========== -->
+  <section class="w-section" id="armors">
+    <div class="container">
+      <div class="w-section-header">
+        <span class="w-section-tag">// Defensive Armor Initiative</span>
+        <h2>Iron Man & Spider-Man Suits</h2>
+        <p class="w-section-desc">Advanced combat platforms utilizing self-assembling nanoparticles, modular heavy defense armor, and tactical military networks.</p>
+      </div>
+
+      <!-- Iron Man Suits Subsection -->
+      <div class="armor-subsection-header">
+        <h3><span class="hud-decor-bracket">[</span> Iron Man Platforms <span class="hud-decor-bracket">]</span></h3>
+      </div>
+      <div class="armor-grid">
+        <!-- Hulkbuster -->
+        <div class="armor-card glass-hud" data-sound="hover">
+          <div class="armor-card-glow"></div>
+          <div class="armor-img-wrap">
+            <img src="../source/works/hulk_buster_MK_XLIV_29.webp" alt="Hulkbuster Mark XLIV">
+            <div class="hud-frame-corners"></div>
+            <div class="hud-scanner"></div>
+          </div>
+          <div class="armor-info">
+            <span class="armor-tag">MARK XLIV // PLANETARY DEFENSE</span>
+            <h3>Hulkbuster (MK XLIV)</h3>
+            <p>Modular heavy-combat system developed by Tony Stark and Bruce Banner. Engineered to withstand raw power and neutralize city-wide threats.</p>
+            <div class="armor-specs">
+              <span>Class: Heavy Modular</span>
+              <span>Armor: Infused Titanium</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Iron Legion -->
+        <div class="armor-card glass-hud" data-sound="hover">
+          <div class="armor-card-glow"></div>
+          <div class="armor-img-wrap">
+            <img src="../source/works/Iron_Legion.webp" alt="Iron Legion">
+            <div class="hud-frame-corners"></div>
+            <div class="hud-scanner"></div>
+          </div>
+          <div class="armor-info">
+            <span class="armor-tag">ROBOTIC DRONES // PEACEKEEPING</span>
+            <h3>Iron Legion</h3>
+            <p>Autonomous drone patrol units designed for peacekeeping, crowd management, and civilian protection during global operations.</p>
+            <div class="armor-specs">
+              <span>Drive: AI Autonomous</span>
+              <span>Primary: Repulsor Matrix</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Link to Suits Page CTA -->
+      <div class="suits-cta-wrap">
+        <div class="suits-cta glass-hud" data-sound="click">
+          <div class="cta-content">
+            <div class="hud-tag">SYSTEMS CALIBRATION // ACTIVE</div>
+            <h4>Want to view all 85 Iron Man Mark suits?</h4>
+            <p>Explore the full tactical suits armory archive, from Mark I to Mark LXXXV.</p>
+          </div>
+          <a href="suits.html" class="btn btn-hud-accent" data-sound="click">Access Suits Armory <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <!-- Spider-Man Suits Subsection -->
+      <div class="armor-subsection-header">
+        <h3><span class="hud-decor-bracket">[</span> Spider-Man Nanotech & Tactical <span class="hud-decor-bracket">]</span></h3>
+      </div>
+      <div class="spider-suits-grid">
+        <!-- Homecoming Suit -->
+        <div class="armor-card glass-hud" data-sound="hover">
+          <div class="armor-card-glow"></div>
+          <div class="armor-img-wrap">
+            <img src="../source/works/spider_man_homecoming_suit.jpg" alt="Homecoming Stark Suit">
+            <div class="hud-frame-corners"></div>
+            <div class="hud-scanner"></div>
+          </div>
+          <div class="armor-info">
+            <span class="armor-tag">STARK INTEGRATED // V1.0</span>
+            <h3>Homecoming Suit</h3>
+            <p>Tony's custom build for Peter. Equipped with the Karen AI, 576 web-shooter combinations, and a deployable drone helper.</p>
+            <div class="armor-specs">
+              <span>AI: Karen Mainframe</span>
+              <span>Web: 576 Variations</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Iron Spider Suit -->
+        <div class="armor-card glass-hud" data-sound="hover">
+          <div class="armor-card-glow"></div>
+          <div class="armor-img-wrap">
+            <img src="../source/works/iron_spider_suit.jpg" alt="Iron Spider Suit" class="iron-spider-img">
+            <div class="hud-frame-corners"></div>
+            <div class="hud-scanner"></div>
+          </div>
+          <div class="armor-info">
+            <span class="armor-tag">NANOTECH PLATES // MARK XLVIII</span>
+            <h3>Iron Spider Suit</h3>
+            <p>Crafted from advanced nanoparticles. Features four cybernetic mechanical arms (waldoes), space survivability, and parachute override.</p>
+            <div class="armor-specs">
+              <span>Waldoes: 4 Mechanical Arms</span>
+              <span>Armor: Nano-Lattice</span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COGNITIVE AI MAINFRAMES ========== -->
+  <section class="w-section" id="aiSystems">
+    <div class="container">
+      <div class="w-section-header">
+        <span class="w-section-tag">// Cognitive Systems Division</span>
+        <h2>AI Mainframes</h2>
+        <p class="w-section-desc">Tony Stark engineered some of the most advanced artificial intelligence platforms in human history — from personal assistants to planetary defense networks.</p>
+      </div>
+
+      <div class="ai-grid">
+        <!-- J.A.R.V.I.S. -->
+        <div class="ai-card" data-sound="hover" id="aiJarvis">
+          <div class="ai-card-glow"></div>
+          <div class="ai-card-images" data-ai="jarvis">
+            <img src="../source/works/JARVIS1.webp" alt="J.A.R.V.I.S. Core 1" class="ai-img active">
+            <img src="../source/works/jarvis.jpg" alt="J.A.R.V.I.S. Core 2" class="ai-img">
+            <div class="ai-img-nav">
+              <span class="ai-dot active" data-index="0"></span>
+              <span class="ai-dot" data-index="1"></span>
+            </div>
+          </div>
+          <div class="ai-header">
+            <div class="ai-icon ai-icon-jarvis">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10" />
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v4M12 18v4M2 12h4M18 12h4" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="ai-name">J.A.R.V.I.S.</h3>
+              <span class="ai-full">Just A Rather Very Intelligent System</span>
+            </div>
+          </div>
+          <p class="ai-desc">Tony's primary AI — managed suit operations, Stark Tower, and served as his closest confidant. After the Ultron crisis, J.A.R.V.I.S. merged with the Mind Stone to become the Vision, an Avenger in his own right.</p>
+          <div class="ai-status">
+            <span class="ai-status-dot ai-status-evolved"></span> Status: Evolved into Vision
+          </div>
+        </div>
+
+        <!-- F.R.I.D.A.Y. -->
+        <div class="ai-card" data-sound="hover" id="aiFriday">
+          <div class="ai-card-glow"></div>
+          <div class="ai-card-images" data-ai="friday">
+            <img src="../source/works/Friday_2.webp" alt="F.R.I.D.A.Y. Interface" class="ai-img active">
+          </div>
+          <div class="ai-header">
+            <div class="ai-icon ai-icon-friday">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+                <path d="M9 9h6M9 13h4M9 17h2" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="ai-name">F.R.I.D.A.Y.</h3>
+              <span class="ai-full">Female Replacement Intelligent Digital Assistant Youth</span>
+            </div>
+          </div>
+          <p class="ai-desc">Successor to J.A.R.V.I.S., F.R.I.D.A.Y. served as Tony's battlefield tactician through Civil War, Infinity War, and Endgame. Known for her Irish accent and calm efficiency under pressure.</p>
+          <div class="ai-status">
+            <span class="ai-status-dot ai-status-active"></span> Status: Active
+          </div>
+        </div>
+
+        <!-- E.D.I.T.H. -->
+        <div class="ai-card" data-sound="hover" id="aiEdith">
+          <div class="ai-card-glow"></div>
+          <div class="ai-card-images" data-ai="edith">
+            <img src="../source/works/EDITH2.jpg" alt="E.D.I.T.H. Satellite" class="ai-img active">
+            <img src="../source/works/Stark_Glasses_EDITH.webp" alt="E.D.I.T.H. Glasses" class="ai-img">
+            <div class="ai-img-nav">
+              <span class="ai-dot active" data-index="0"></span>
+              <span class="ai-dot" data-index="1"></span>
+            </div>
+          </div>
+          <div class="ai-header">
+            <div class="ai-icon ai-icon-edith">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="ai-name">E.D.I.T.H.</h3>
+              <span class="ai-full">Even Dead I'm The Hero</span>
+            </div>
+          </div>
+          <p class="ai-desc">Tony's posthumous defense system — a global orbital satellite network controlling an army of weaponized drones. Bequeathed to Peter Parker through augmented-reality glasses as a final act of guardianship.</p>
+          <div class="ai-status">
+            <span class="ai-status-dot ai-status-transferred"></span> Status: Transferred to Spider-Man
+          </div>
+        </div>
+
+        <!-- ULTRON -->
+        <div class="ai-card ai-card-ultron" data-sound="hover" id="aiUltron">
+          <div class="ai-card-glow ai-glow-danger"></div>
+          <div class="ai-card-images" data-ai="ultron">
+            <img src="../source/works/ultron.jpg" alt="Ultron" class="ai-img active">
+          </div>
+          <div class="ai-header">
+            <div class="ai-icon ai-icon-ultron">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
+                <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                <line x1="9" y1="9" x2="9.01" y2="9" />
+                <line x1="15" y1="9" x2="15.01" y2="9" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="ai-name ai-name-danger">ULTRON</h3>
+              <span class="ai-full">Global Peacekeeping Initiative</span>
+            </div>
+          </div>
+          <p class="ai-desc">Originally designed as a global peacekeeping AI using the Mind Stone's intelligence matrix, Ultron gained sentience and concluded that humanity was its own threat. He nearly caused an extinction event before being destroyed.</p>
+          <div class="ai-status">
+            <span class="ai-status-dot ai-status-destroyed"></span> Status: Destroyed
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TIME TRAVEL NAVIGATION ========== -->
+  <section class="w-section" id="timeTravel">
+    <div class="container">
+      <div class="w-section-header">
+        <span class="w-section-tag">// Quantum Navigation Initiative</span>
+        <h2>Time Travel Navigation</h2>
+        <p class="w-section-desc">The breakthrough device that made the impossible possible — stabilizing coordinates across the quantum realm to allow safe travel through time.</p>
+      </div>
+      <div class="time-travel-layout">
+        <!-- Card 1: Time-Space GPS Device -->
+        <div class="time-gps-card glass-hud" data-sound="hover">
+          <div class="gps-card-glow"></div>
+          <div class="gps-layout">
+            <div class="gps-img-wrap">
+              <img src="../source/works/Time-Space GPS1.jpg" alt="Time-Space GPS Device">
+              <div class="hud-frame-corners"></div>
+              <div class="hud-scanner"></div>
+            </div>
+            <div class="gps-info">
+              <span class="gps-tag">QUANTUM DEVICE // STARK LABS</span>
+              <h3>Quantum Time-Space GPS</h3>
+              <p>The compact, wearable locator developed in Tony Stark's garage. By providing a stable coordinate system in the Quantum Realm, it allowed the Avengers to perform the Time Heist, retrieve the Infinity Stones, and safely return to their precise entry point in 2023.</p>
+              <div class="gps-specs">
+                <div class="gps-spec-item"><span>CALIBRATION</span><strong>NOMINAL</strong></div>
+                <div class="gps-spec-item"><span>ACCURACY</span><strong>99.999%</strong></div>
+                <div class="gps-spec-item"><span>DIVERGENCE</span><strong>0.00%</strong></div>
+                <div class="gps-spec-item"><span>STABILITY</span><strong>OPTIMAL</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Tony showing Captain America -->
+        <div class="time-gps-card glass-hud" data-sound="hover">
+          <div class="gps-card-glow"></div>
+          <div class="gps-layout gps-layout-reverse">
+            <div class="gps-img-wrap">
+              <img src="../source/works/Time-Space GPS2 tony showing captain.jpg" alt="Tony showing Captain America">
+              <div class="hud-frame-corners"></div>
+              <div class="hud-scanner"></div>
+            </div>
+            <div class="gps-info">
+              <span class="gps-tag">TEMPORAL MECHANICS // EXPO MODEL</span>
+              <h3>The Inverted Möbius Strip Solution</h3>
+              <p>Tony discovered that modeling time travel coordinates in a configuration of an inverted Möbius strip stabilizes quantum fluctuation, avoiding the "eigenvalue breakdown" that previously turned Scott Lang into a baby or old man. He demonstrates this proof to Steve Rogers, cementing their coordinate map.</p>
+              <div class="gps-specs">
+                <div class="gps-spec-item"><span>THEORY</span><strong>Möbius Inversion</strong></div>
+                <div class="gps-spec-item"><span>EIGENVALUE</span><strong>0.0021s</strong></div>
+                <div class="gps-spec-item"><span>RE-ENTRY</span><strong>COORDINATED</strong></div>
+                <div class="gps-spec-item"><span>TIMELINE</span><strong>STABLE</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== HOLOGRAPHIC HUD LIGHTBOX MODAL ========== -->
+  <div class="hud-lightbox" id="hudLightbox">
+    <div class="lightbox-overlay" id="lightboxOverlay"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close-btn" id="lightboxClose" data-sound="click" aria-label="Close modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="lightbox-image-wrap">
+        <div class="hud-frame-corners"></div>
+        <img src="" alt="Full view" id="lightboxImg">
+        <div class="hud-scanner"></div>
+      </div>
+      <div class="lightbox-details">
+        <span class="lightbox-tag" id="lightboxTag">CALIBRATION SYSTEM // ENGAGED</span>
+        <h3 class="lightbox-title" id="lightboxTitle">SYSTEM CONFIGURATION</h3>
+        <p class="lightbox-desc" id="lightboxDesc">Full tactical telemetry and structural visualization.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">STARK<span style="color: var(--arc-blue);">.</span></div>
+          <p>A tribute to the genius, billionaire, playboy, philanthropist who saved the universe. "Proof that intelligence can rival gods."</p>
+        </div>
+        <div class="footer-column">
+          <h4>Navigate</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="appearances.html">Appearances</a>
+        </div>
+        <div class="footer-column">
+          <h4>Explore</h4>
+          <a href="works.html">Works</a>
+          <a href="suits.html">Suits</a>
+          <a href="timeline.html">Timeline</a>
+        </div>
+        <div class="footer-column">
+          <h4>System</h4>
+          <a href="#worksHeader">Back to Top</a>
+          <a href="about.html">Credits</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Stark Industries — All Rights Reserved.</p>
+        <div class="footer-status">
+          <span class="status-dot"></span>
+          J.A.R.V.I.S. System Online
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M18 15l-6-6-6 6" />
+    </svg>
+  </button>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="../js/main.js"></script>
+  <script src="../js/works.js"></script>
+</body>
+
+</html>

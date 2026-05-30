@@ -1,0 +1,196 @@
+/* ============================================================
+   TONY STARK PORTFOLIO — ABOUT PAGE STYLES
+   ============================================================ */
+
+/* ---- About Hero ---- */
+.about-hero {
+  padding: calc(80px + var(--space-xl)) 0 var(--space-xl);
+  position: relative;
+  background: transparent;
+  overflow: hidden;
+  text-align: center;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, var(--arc-blue-glow) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.about-hero h1 {
+  font-size: var(--fs-xl);
+  margin-bottom: var(--space-md);
+}
+
+.about-hero .page-subtitle {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--arc-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+/* ---- Bio Section ---- */
+.bio-section {
+  padding: var(--space-4xl) 0;
+}
+
+.bio-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+.bio-image-wrapper {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+}
+
+.bio-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bio-image-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(10, 10, 15, 0.6) 100%);
+  pointer-events: none;
+}
+
+.bio-content h2 {
+  font-size: var(--fs-xl);
+  margin-bottom: var(--space-lg);
+  color: var(--text-highlight);
+}
+
+.bio-content p {
+  margin-bottom: var(--space-lg);
+  line-height: 1.9;
+}
+
+.bio-content .bio-highlight {
+  color: var(--arc-blue);
+  font-weight: 600;
+}
+
+/* ---- Stats Grid ---- */
+.stats-section {
+  padding: var(--space-3xl) 0;
+  background: var(--bg-secondary);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+}
+
+.stat-card {
+  text-align: center;
+  padding: var(--space-2xl);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+}
+
+.stat-card:hover {
+  border-color: var(--border-glow);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-glow-blue);
+}
+
+.stat-card .stat-number {
+  font-family: var(--font-heading);
+  font-size: var(--fs-2xl);
+  font-weight: 800;
+  color: var(--arc-blue);
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.stat-card .stat-label {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* ---- About Website Section ---- */
+.about-website {
+  padding: var(--space-4xl) 0;
+}
+
+.about-website-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-website-content h2 {
+  margin-bottom: var(--space-lg);
+}
+
+.about-website-content p {
+  margin-bottom: var(--space-lg);
+  line-height: 1.9;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  justify-content: center;
+  margin-top: var(--space-xl);
+}
+
+.tech-badge {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--stark-gold);
+  background: rgba(240, 192, 64, 0.08);
+  border: 1px solid rgba(240, 192, 64, 0.2);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.1em;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .bio-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   ABOUT PAGE BACKGROUND IMAGE OVERRIDE
+   ============================================================ */
+body::before {
+  background-image: url('../source/about_page.jpg') !important;
+}
+
